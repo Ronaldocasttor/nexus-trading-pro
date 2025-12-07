@@ -3,11 +3,166 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NEXUS TRADING PRO IA - Robô de trading automatizado para MetaTrader 5 com IA avançada. Sistema profissional de gerenciamento de risco e lucros consistentes.">
-    <meta name="keywords" content="robô trading, MetaTrader 5, EA, trading automatizado, forex, ouro, índices">
-    <title>NEXUS TRADING PRO IA - Robô Profissional MT5</title>
+    <meta name="description" content="NEXUS TRADING PRO IA v4.71 - Robô MT5 com 23 botões clicáveis, 3 painéis completos, compatibilidade HEDGE+NETTING, 8 filtros técnicos e 7 proteções simultâneas.">
+    <meta name="keywords" content="robô trading, MetaTrader 5, EA, 23 botões, trading automatizado, forex, ouro, índices, NETTING, HEDGE">
+    <title>NEXUS TRADING PRO IA v4.71 - 23 Botões + 3 Painéis Profissionais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Estilos adicionais para os 23 botões */
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px auto;
+            max-width: 900px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+        
+        .highlight-box h3 {
+            color: #ffd700;
+            margin-bottom: 15px;
+            font-size: 2em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .highlight-box p {
+            color: white;
+            font-size: 1.2em;
+            line-height: 1.8;
+        }
+        
+        .buttons-breakdown {
+            max-width: 1100px;
+            margin: 60px auto;
+        }
+        
+        .button-category {
+            background: rgba(255,255,255,0.05);
+            padding: 40px;
+            margin-bottom: 40px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        
+        .button-category h3 {
+            color: #ffd700;
+            margin-bottom: 25px;
+            font-size: 1.8em;
+        }
+        
+        .button-visual {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 25px 0;
+        }
+        
+        .btn-demo {
+            padding: 15px 25px;
+            border-radius: 10px;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 1.05em;
+            border: none;
+        }
+        
+        .btn-demo:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+        }
+        
+        .btn-demo.small { 
+            padding: 12px 20px; 
+            font-size: 0.95em; 
+            background: #008080; 
+            color: white; 
+        }
+        .btn-demo.green { background: #28a745; color: white; }
+        .btn-demo.red { background: #dc3545; color: white; }
+        .btn-demo.blue { background: #007bff; color: white; }
+        .btn-demo.orange { background: #fd7e14; color: white; }
+        .btn-demo.purple { background: #6f42c1; color: white; }
+        .btn-demo.teal { background: #20c997; color: white; }
+        .btn-demo.lime { background: #32cd32; color: white; }
+        .btn-demo.wide { min-width: 280px; }
+        
+        .button-category ul {
+            text-align: left;
+            margin: 25px 40px;
+            line-height: 2;
+        }
+        
+        .button-category li {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+        
+        .dark-section {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 100px 20px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.4em;
+            margin-bottom: 60px;
+            opacity: 0.95;
+        }
+        
+        .specs-table {
+            max-width: 900px;
+            margin: 50px auto;
+        }
+        
+        .specs-table table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .specs-table tr {
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .specs-table tr:last-child {
+            border-bottom: none;
+        }
+        
+        .specs-table td {
+            padding: 25px;
+            font-size: 1.15em;
+        }
+        
+        .specs-table td:first-child {
+            background: #f8f9fa;
+            width: 40%;
+            font-weight: 600;
+        }
+        
+        .highlight-row {
+            background: linear-gradient(90deg, #fff3cd 0%, #ffffff 100%) !important;
+        }
+        
+        .highlight-row td {
+            padding: 30px 25px !important;
+            font-size: 1.2em !important;
+        }
+        
+        .highlight-row td:first-child {
+            background: linear-gradient(90deg, #ffc107 0%, #fff3cd 100%) !important;
+        }
+    </style>
 </head>
 <body>
     <!-- HERO SECTION -->
@@ -21,8 +176,8 @@
                 </div>
                 <div class="nav-links">
                     <a href="#recursos">Recursos</a>
+                    <a href="#botoes">23 Botões</a>
                     <a href="#precos">Preços</a>
-                    <a href="#depoimentos">Depoimentos</a>
                     <a href="#contato" class="btn-nav">Adquirir Agora</a>
                 </div>
             </div>
@@ -31,30 +186,36 @@
         <div class="hero-content">
             <div class="container">
                 <div class="hero-text">
-                    <span class="badge">✨ Versão 4.71 - Universal HEDGE + NETTING</span>
-                    <h1>Transforme Seu Trading com <span class="gradient-text">Inteligência Artificial</span></h1>
-                    <p class="hero-subtitle">O robô mais avançado para MetaTrader 5. Sistema completo de gerenciamento de risco, proteções inteligentes e lucros consistentes.</p>
+                    <span class="badge">✨ Versão 4.71 - 9.193 linhas | Bilíngue PT/EN</span>
+                    <h1>O Robô MT5 com <span class="gradient-text">23 Botões Clicáveis</span></h1>
+                    <p class="hero-subtitle">3 Painéis Completos + Trading Visual + Compatibilidade HEDGE+NETTING + 8 Filtros + 7 Proteções</p>
+                    
+                    <!-- DESTAQUE DOS 23 BOTÕES -->
+                    <div class="highlight-box">
+                        <h3>🎛️ 23 BOTÕES CLICÁVEIS PROFISSIONAIS</h3>
+                        <p>6 Volumes Rápidos + 6 Execução de Ordens + 5 Gerenciamento<br>+ 2 Ferramentas Avançadas + 4 Controles de Interface</p>
+                    </div>
                     
                     <div class="hero-stats">
                         <div class="stat">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-th"></i>
                             <div>
-                                <h3>500+</h3>
-                                <p>Traders Ativos</p>
+                                <h3>23</h3>
+                                <p>Botões Clicáveis</p>
                             </div>
                         </div>
                         <div class="stat">
-                            <i class="fas fa-chart-line"></i>
+                            <i class="fas fa-columns"></i>
                             <div>
-                                <h3>85%</h3>
-                                <p>Taxa de Sucesso</p>
+                                <h3>3</h3>
+                                <p>Painéis Completos</p>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-shield-alt"></i>
                             <div>
-                                <h3>24/7</h3>
-                                <p>Proteção Ativa</p>
+                                <h3>7</h3>
+                                <p>Proteções Ativas</p>
                             </div>
                         </div>
                     </div>
@@ -63,15 +224,15 @@
                         <a href="#precos" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> Começar Agora
                         </a>
-                        <a href="#recursos" class="btn btn-secondary">
-                            <i class="fas fa-play-circle"></i> Ver Recursos
+                        <a href="#botoes" class="btn btn-secondary">
+                            <i class="fas fa-th"></i> Ver os 23 Botões
                         </a>
                     </div>
 
                     <div class="trust-badges">
                         <span><i class="fas fa-check-circle"></i> Garantia de 7 dias</span>
                         <span><i class="fas fa-lock"></i> Pagamento Seguro</span>
-                        <span><i class="fas fa-headset"></i> Suporte Premium</span>
+                        <span><i class="fas fa-headset"></i> Suporte Vitalício</span>
                     </div>
                 </div>
             </div>
@@ -87,194 +248,313 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-badge">💎 Recursos Exclusivos</span>
-                <h2>Por Que o NEXUS TRADING PRO IA?</h2>
-                <p>Tecnologia de ponta desenvolvida para traders profissionais e iniciantes</p>
+                <h2>Por Que o NEXUS TRADING PRO IA v4.71?</h2>
+                <p>O único robô brasileiro com 23 botões clicáveis e controle total</p>
             </div>
 
             <div class="features-grid">
-                <div class="feature-card">
+                <!-- DESTAQUE: 23 BOTÕES -->
+                <div class="feature-card featured">
+                    <div class="popular-badge">🏆 Exclusivo</div>
                     <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-th"></i>
                     </div>
-                    <h3>Inteligência Artificial Avançada</h3>
-                    <p>Sistema de IA que analisa múltiplos indicadores (MME, RSI, ADX, Bandas de Bollinger) e toma decisões em milissegundos.</p>
+                    <h3>23 Botões Clicáveis</h3>
+                    <p>Controle total na palma da mão - o mais completo do Brasil!</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> 15+ filtros configuráveis</li>
-                        <li><i class="fas fa-check"></i> Análise de tendência automática</li>
-                        <li><i class="fas fa-check"></i> Confirmação multi-timeframe</li>
+                        <li><i class="fas fa-check"></i> 6 Volumes Rápidos (0.01 até 5.00)</li>
+                        <li><i class="fas fa-check"></i> 6 Execução (Market, BID/ASK, Stop)</li>
+                        <li><i class="fas fa-check"></i> 5 Gerenciamento (Close All, Buy/Sell)</li>
+                        <li><i class="fas fa-check"></i> 2 Ferramentas (Invert, BreakEven)</li>
+                        <li><i class="fas fa-check"></i> 4 Controles (Panel, Visual, Hide)</li>
                     </ul>
                 </div>
 
-                <div class="feature-card featured">
-                    <div class="popular-badge">Mais Popular</div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>3 Painéis Completos</h3>
+                    <p>Interface profissional com informações em tempo real.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Lateral 250x700px (21 botões)</li>
+                        <li><i class="fas fa-check"></i> Inferior 900x190px (4 colunas)</li>
+                        <li><i class="fas fa-check"></i> Licença automática (2 botões)</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3>Trading Visual com Mouse</h3>
+                    <p>Opere direto no gráfico com Shift/Ctrl + Click.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Shift+Click = Compra</li>
+                        <li><i class="fas fa-check"></i> Ctrl+Click = Venda</li>
+                        <li><i class="fas fa-check"></i> Hotkey Q ativa/desativa</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>HEDGE + NETTING Universal</h3>
+                    <p>Auto-detecção funciona em XP, Modal, Rico, Clear.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Detecção automática</li>
+                        <li><i class="fas fa-check"></i> 2 sistemas fechamento parcial</li>
+                        <li><i class="fas fa-check"></i> Adaptação inteligente</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Gerenciamento de Risco Profissional</h3>
-                    <p>Proteção total do seu capital com sistemas avançados de controle de risco.</p>
+                    <h3>7 Proteções Simultâneas</h3>
+                    <p>Capital protegido com múltiplas camadas de segurança.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Stop Loss dinâmico por candle</li>
-                        <li><i class="fas fa-check"></i> Take Profit inteligente (1x a 4x)</li>
-                        <li><i class="fas fa-check"></i> Breakeven automático</li>
-                        <li><i class="fas fa-check"></i> Trailing Stop adaptativo</li>
-                        <li><i class="fas fa-check"></i> Lucro alvo diário</li>
+                        <li><i class="fas fa-check"></i> Breakeven (3 modos)</li>
+                        <li><i class="fas fa-check"></i> Trailing Stop (2 sistemas)</li>
+                        <li><i class="fas fa-check"></i> TP Dinâmico + Drawdown</li>
                     </ul>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-filter"></i>
                     </div>
-                    <h3>100% Automatizado</h3>
-                    <p>Configure uma vez e deixe o robô trabalhar 24/7 enquanto você foca em outras atividades.</p>
+                    <h3>8 Filtros Técnicos</h3>
+                    <p>Sistema inteligente de análise multi-indicadores.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Modo totalmente automático</li>
-                        <li><i class="fas fa-check"></i> Execução instantânea</li>
-                        <li><i class="fas fa-check"></i> Zero interferência manual</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Painel de Controle Avançado</h3>
-                    <p>Interface intuitiva com todas as informações em tempo real.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Lucros em tempo real (diário + aberto)</li>
-                        <li><i class="fas fa-check"></i> Estatísticas detalhadas</li>
-                        <li><i class="fas fa-check"></i> Controle manual por botões</li>
-                        <li><i class="fas fa-check"></i> Modo Visual Mouse Trading</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Universal: HEDGE + NETTING</h3>
-                    <p>Funciona em qualquer tipo de conta MetaTrader 5, sem limitações.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Contas HEDGE (múltiplas posições)</li>
-                        <li><i class="fas fa-check"></i> Contas NETTING (posição única)</li>
-                        <li><i class="fas fa-check"></i> Detecção automática</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Sistema Bilíngue PT/EN</h3>
-                    <p>Interface completa em Português e Inglês para traders internacionais.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Português completo</li>
-                        <li><i class="fas fa-check"></i> English full support</li>
-                        <li><i class="fas fa-check"></i> Troca com 1 clique</li>
+                        <li><i class="fas fa-check"></i> Stochastic (2 tipos)</li>
+                        <li><i class="fas fa-check"></i> RSI, MAs (local + externa)</li>
+                        <li><i class="fas fa-check"></i> Price Action, MTF, Continuity</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- RECURSOS DETALHADOS -->
-    <section class="detailed-features">
+    <!-- SEÇÃO DETALHADA DOS 23 BOTÕES -->
+    <section id="botoes" class="dark-section">
         <div class="container">
-            <div class="detail-row">
-                <div class="detail-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-chart-line fa-5x"></i>
-                        <p>Painel de Controle em Ação</p>
-                    </div>
-                </div>
-                <div class="detail-content">
-                    <span class="detail-badge">⚡ Performance</span>
-                    <h2>Sistema de Cache de Alta Performance</h2>
-                    <p>Otimização extrema para execução em milissegundos:</p>
-                    <ul class="checklist">
-                        <li><i class="fas fa-bolt"></i> Cache de preços (0ms de latência)</li>
-                        <li><i class="fas fa-bolt"></i> Cache de posições (atualização instantânea)</li>
-                        <li><i class="fas fa-bolt"></i> Zero lag na execução</li>
-                        <li><i class="fas fa-bolt"></i> Processamento paralelo</li>
-                    </ul>
-                </div>
+            <div class="section-header">
+                <span class="section-badge">🎯 Controle Profissional</span>
+                <h2>Detalhamento dos 23 Botões Clicáveis</h2>
+                <p class="section-subtitle">Layout otimizado para traders profissionais com controle total</p>
             </div>
 
-            <div class="detail-row reverse">
-                <div class="detail-content">
-                    <span class="detail-badge">🛡️ Proteção Total</span>
-                    <h2>15+ Sistemas de Proteção</h2>
-                    <p>Seu capital está seguro com múltiplas camadas de proteção:</p>
-                    <ul class="checklist">
-                        <li><i class="fas fa-shield-alt"></i> Filtro de Horário (não opera em horários ruins)</li>
-                        <li><i class="fas fa-shield-alt"></i> Filtro de Dias (escolha os melhores dias)</li>
-                        <li><i class="fas fa-shield-alt"></i> Filtro de Spread (evita spreads altos)</li>
-                        <li><i class="fas fa-shield-alt"></i> Filtro de Notícias (pause antes de eventos)</li>
-                        <li><i class="fas fa-shield-alt"></i> Filtro Conservador (3 MAs + comparação)</li>
-                        <li><i class="fas fa-shield-alt"></i> Limite de Ordens Simultâneas</li>
-                        <li><i class="fas fa-shield-alt"></i> Distância Mínima entre Ordens</li>
-                        <li><i class="fas fa-shield-alt"></i> Zeragem Automática (fecha tudo no lucro alvo)</li>
+            <div class="buttons-breakdown">
+                <!-- Categoria 1: Volumes -->
+                <div class="button-category">
+                    <h3>📦 CATEGORIA 1: Volumes Rápidos (6 botões)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo small">0.01</span>
+                        <span class="btn-demo small">0.05</span>
+                        <span class="btn-demo small">0.10</span>
+                        <span class="btn-demo small">0.50</span>
+                        <span class="btn-demo small">1.00</span>
+                        <span class="btn-demo small">5.00</span>
+                    </div>
+                    <p><strong>Como funciona:</strong> Altere o volume de negociação instantaneamente sem digitar. Um clique e todas as próximas ordens usarão esse volume automaticamente!</p>
+                    <ul>
+                        <li>✅ <strong>0.01</strong> - Micro lote para testes</li>
+                        <li>✅ <strong>0.05</strong> - Conservador operacional</li>
+                        <li>✅ <strong>0.10</strong> - Padrão recomendado</li>
+                        <li>✅ <strong>0.50</strong> - Médio agressivo</li>
+                        <li>✅ <strong>1.00</strong> - Lote inteiro</li>
+                        <li>✅ <strong>5.00</strong> - Alto volume profissional</li>
                     </ul>
                 </div>
-                <div class="detail-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-shield-alt fa-5x"></i>
-                        <p>Múltiplas Proteções Ativas</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="detail-row">
-                <div class="detail-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-mouse-pointer fa-5x"></i>
-                        <p>Mouse Trading Ativo</p>
+                <!-- Categoria 2: Execução -->
+                <div class="button-category">
+                    <h3>⚡ CATEGORIA 2: Execução de Ordens (6 botões)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo green">🟢 BUY MKT</span>
+                        <span class="btn-demo red">🔴 SELL MKT</span>
                     </div>
+                    <div class="button-visual">
+                        <span class="btn-demo blue">🟦 BUY BID</span>
+                        <span class="btn-demo orange">🟥 SELL ASK</span>
+                    </div>
+                    <div class="button-visual">
+                        <span class="btn-demo green">⬆️ BUY STOP</span>
+                        <span class="btn-demo red">⬇️ SELL STOP</span>
+                    </div>
+                    <ul>
+                        <li>✅ <strong>BUY/SELL MARKET:</strong> Execução instantânea a mercado (ASK/BID)</li>
+                        <li>✅ <strong>BUY BID / SELL ASK:</strong> Tenta LIMIT no preço favorável, fallback para MARKET se não executar</li>
+                        <li>✅ <strong>BUY/SELL STOP:</strong> Ordens pendentes de rompimento com distância configurável</li>
+                    </ul>
                 </div>
-                <div class="detail-content">
-                    <span class="detail-badge">🖱️ Inovação</span>
-                    <h2>Modo Visual Mouse Trading</h2>
-                    <p>Opere manualmente com 1 clique no gráfico:</p>
-                    <ul class="checklist">
-                        <li><i class="fas fa-hand-pointer"></i> Clique esquerdo = COMPRA no preço</li>
-                        <li><i class="fas fa-hand-pointer"></i> Clique direito = VENDA no preço</li>
-                        <li><i class="fas fa-hand-pointer"></i> Execução instantânea</li>
-                        <li><i class="fas fa-hand-pointer"></i> SL/TP aplicados automaticamente</li>
+
+                <!-- Categoria 3: Gerenciamento -->
+                <div class="button-category">
+                    <h3>🎚️ CATEGORIA 3: Gerenciamento de Posições (5 botões)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo wide orange">🔴 CLOSE ALL</span>
+                    </div>
+                    <div class="button-visual">
+                        <span class="btn-demo green">❌ CLOSE BUY</span>
+                        <span class="btn-demo red">❌ CLOSE SELL</span>
+                    </div>
+                    <div class="button-visual">
+                        <span class="btn-demo green">🚫 CANCEL BUY</span>
+                        <span class="btn-demo red">🚫 CANCEL SELL</span>
+                    </div>
+                    <ul>
+                        <li>✅ <strong>CLOSE ALL:</strong> Botão de emergência - fecha TODAS as posições abertas instantaneamente (compras + vendas)</li>
+                        <li>✅ <strong>CLOSE BUY/SELL:</strong> Fecha apenas compras ou apenas vendas, mantém outra direção aberta</li>
+                        <li>✅ <strong>CANCEL BUY/SELL:</strong> Cancela ordens pendentes por direção (Buy Stop, Buy Limit, Sell Stop, Sell Limit)</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria 4: Ferramentas -->
+                <div class="button-category">
+                    <h3>🔧 CATEGORIA 4: Ferramentas Avançadas (2 botões)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo purple">🔄 INVERT</span>
+                        <span class="btn-demo purple">⚖️ BREAK EVEN</span>
+                    </div>
+                    <ul>
+                        <li>✅ <strong>INVERT:</strong> 
+                            <ul style="margin-top: 10px;">
+                                <li><strong>HEDGE:</strong> Fecha todas as posições + abre no sentido oposto com mesmo volume total</li>
+                                <li><strong>NETTING:</strong> Fecha → aguarda 500ms → abre invertido sequencialmente</li>
+                            </ul>
+                        </li>
+                        <li>✅ <strong>BREAK EVEN:</strong> Move Stop Loss de TODAS as posições para preço de abertura manualmente (protege capital instantaneamente)</li>
+                    </ul>
+                </div>
+
+                <!-- Categoria 5: Controles -->
+                <div class="button-category">
+                    <h3>⚙️ CATEGORIA 5: Controles de Interface (4 botões)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo wide teal">📊 BOTTOM PANEL</span>
+                    </div>
+                    <div class="button-visual">
+                        <span class="btn-demo wide lime">🖱️ VISUAL MODE: ✅</span>
+                    </div>
+                    <div class="button-visual">
+                        <span class="btn-demo wide blue">👁️ HIDE PANEL (M)</span>
+                    </div>
+                    <ul>
+                        <li>✅ <strong>BOTTOM PANEL:</strong> Exibe/oculta painel horizontal inferior (900x190px com 4 colunas: Configuração, Status, Lucros, Posições)</li>
+                        <li>✅ <strong>VISUAL MODE:</strong> Ativa/desativa trading com mouse - ✅ Verde = Ativo (Shift/Ctrl + Click) | ❌ Cinza = Desativado | Hotkey: <strong>Q</strong></li>
+                        <li>✅ <strong>HIDE PANEL:</strong> Minimiza painel lateral para botão pequeno, libera espaço no gráfico | Restaura com <strong>M</strong> ou clique</li>
+                    </ul>
+                    <p><strong>🎹 Atalhos de Teclado:</strong> M = Minimizar/Maximizar Painel | Q = Ativar/Desativar Modo Visual</p>
+                </div>
+
+                <!-- Painel de Licença -->
+                <div class="button-category" style="border: 2px solid #ffc107;">
+                    <h3>🔐 BÔNUS: Painel de Licença (2 botões quando expirada)</h3>
+                    <div class="button-visual">
+                        <span class="btn-demo lime">📱 CONTACT</span>
+                        <span class="btn-demo orange">UNDERSTOOD</span>
+                    </div>
+                    <p><strong>Quando aparece:</strong> Apenas quando a licença está expirada ou próxima do vencimento</p>
+                    <ul>
+                        <li>✅ <strong>📱 CONTACT:</strong> Link direto para WhatsApp/Telegram do suporte</li>
+                        <li>✅ <strong>UNDERSTOOD:</strong> Fecha o aviso (EA permanece bloqueado até renovação)</li>
+                        <li>⚠️ <strong>Estados:</strong> ✅ Válida (sem painel) | ⚠️ 7 dias (aviso amarelo) | ❌ Expirada (painel vermelho + EA bloqueado)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- COMPATIBILIDADE -->
+    <!-- ESPECIFICAÇÕES TÉCNICAS -->
     <section class="compatibility">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">✅ Compatibilidade Total</span>
-                <h2>Funciona em Todos os Ativos</h2>
-                <p>Testado e aprovado nos principais mercados financeiros</p>
+                <span class="section-badge">📋 Especificações Completas</span>
+                <h2>Detalhes Técnicos do NEXUS v4.71</h2>
+                <p>9.193 linhas de código profissional otimizado</p>
             </div>
 
-            <div class="compatibility-grid">
+            <div class="specs-table">
+                <table>
+                    <tr class="highlight-row">
+                        <td><strong>🎛️ Botões Clicáveis</strong></td>
+                        <td><strong>23 botões</strong> (21 painel lateral + 2 painel licença)</td>
+                    </tr>
+                    <tr class="highlight-row">
+                        <td><strong>📊 Painéis</strong></td>
+                        <td><strong>3 painéis completos</strong> (Lateral 250x700px + Inferior 900x190px + Licença automática)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Código</strong></td>
+                        <td>9.193 linhas (English) | 9.248 (Português)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parâmetros</strong></td>
+                        <td>150+ organizados em 20 grupos com █ separadores</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Funções</strong></td>
+                        <td>180+ otimizadas</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Filtros Técnicos</strong></td>
+                        <td>8 independentes (Stoch 2x, RSI, MAs, Price Action, MTF, Continuity, Spread)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Proteções</strong></td>
+                        <td>7 camadas (BE 3 modos, Trailing 2 sistemas, TP Dinâmico, Drawdown 3 tipos, Lucro/Perda diária)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Performance</strong></td>
+                        <td>&lt; 5% CPU | &lt; 50MB RAM | &lt; 10ms latência | Cache 200ms | OnTimer 1s</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Compatibilidade</strong></td>
+                        <td>HEDGE + NETTING (auto-detecção) | XP, Modal, Rico, Clear</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Fechamento Parcial</strong></td>
+                        <td>2 sistemas para NETTING (LIMIT orders + PositionClosePartial)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Idiomas</strong></td>
+                        <td>Português + English (código completo bilíngue)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Licenciamento</strong></td>
+                        <td>Google Sheets (online) + XOR criptografado (offline)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Versão</strong></td>
+                        <td>4.71 (Atualizada em Dezembro 2025)</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="compatibility-grid" style="margin-top: 60px;">
                 <div class="compat-card">
                     <i class="fas fa-coins"></i>
                     <h3>Forex</h3>
-                    <p>EUR/USD, GBP/USD, USD/JPY, etc.</p>
+                    <p>EUR/USD, GBP/USD, USD/JPY, todos os pares</p>
                 </div>
                 <div class="compat-card">
                     <i class="fas fa-gem"></i>
                     <h3>Metais</h3>
-                    <p>OURO (XAU/USD), Prata, etc.</p>
+                    <p>OURO (XAU/USD), Prata, Platina</p>
                 </div>
                 <div class="compat-card">
                     <i class="fas fa-chart-area"></i>
                     <h3>Índices</h3>
-                    <p>S&P500, NASDAQ, DAX, etc.</p>
+                    <p>WIN, WDO, S&P500, NASDAQ, DAX, IBOV</p>
                 </div>
                 <div class="compat-card">
                     <i class="fas fa-oil-can"></i>
                     <h3>Commodities</h3>
-                    <p>Petróleo, Gás Natural, etc.</p>
+                    <p>Petróleo, Gás Natural, Café</p>
                 </div>
             </div>
         </div>
@@ -284,9 +564,9 @@
     <section id="precos" class="pricing">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">💰 Planos e Preços</span>
+                <span class="section-badge">💰 Investimento</span>
                 <h2>Escolha o Plano Ideal Para Você</h2>
-                <p>Investimento que se paga rapidamente com lucros consistentes</p>
+                <p>Controle total com 23 botões + 3 painéis profissionais</p>
             </div>
 
             <div class="pricing-grid">
@@ -297,11 +577,13 @@
                         <p class="price-subtitle">Ideal para testar</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 1 mês de acesso completo</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 1 conta real</li>
-                        <li><i class="fas fa-check"></i> Todos os recursos</li>
-                        <li><i class="fas fa-check"></i> Suporte por WhatsApp</li>
-                        <li><i class="fas fa-check"></i> Atualizações grátis</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
+                        <li><i class="fas fa-check"></i> Suporte WhatsApp</li>
                         <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                     </ul>
                     <a href="#contato" class="btn btn-outline">Começar Agora</a>
@@ -316,13 +598,15 @@
                         <span class="discount">Economize R$ 194</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> 3 meses de acesso completo</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 2 contas reais</li>
-                        <li><i class="fas fa-check"></i> Todos os recursos</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
                         <li><i class="fas fa-check"></i> Suporte prioritário</li>
-                        <li><i class="fas fa-check"></i> Atualizações grátis</li>
-                        <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                         <li><i class="fas fa-star"></i> Grupo VIP Telegram</li>
+                        <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                     </ul>
                     <a href="#contato" class="btn btn-primary">Quero Este!</a>
                 </div>
@@ -330,17 +614,20 @@
                 <div class="pricing-card">
                     <div class="pricing-header">
                         <h3>Vitalício</h3>
-                        <p class="price">R$ 1.997<span>/pagamento único</span></p>
+                        <p class="price">R$ 2.997<span>/único</span></p>
                         <p class="price-subtitle">Acesso para sempre</p>
-                        <span class="discount">Economize R$ 1.567</span>
+                        <span class="discount">Economize R$ 2.567</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> Acesso VITALÍCIO</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 3 contas reais</li>
-                        <li><i class="fas fa-check"></i> Todos os recursos</li>
-                        <li><i class="fas fa-check"></i> Suporte VIP</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
+                        <li><i class="fas fa-check"></i> Acesso VITALÍCIO</li>
                         <li><i class="fas fa-check"></i> Atualizações ETERNAS</li>
-                        <li><i class="fas fa-check"></i> Garantia 7 dias</li>
+                        <li><i class="fas fa-star"></i> Suporte VIP</li>
                         <li><i class="fas fa-star"></i> Grupo VIP Telegram</li>
                         <li><i class="fas fa-star"></i> Consultoria personalizada</li>
                     </ul>
@@ -352,80 +639,7 @@
                 <i class="fas fa-shield-alt"></i>
                 <div>
                     <h3>Garantia Incondicional de 7 Dias</h3>
-                    <p>Se não gostar por QUALQUER motivo, devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- DEPOIMENTOS -->
-    <section id="depoimentos" class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">⭐ Depoimentos</span>
-                <h2>O Que Nossos Clientes Dizem</h2>
-                <p>Resultados reais de traders reais</p>
-            </div>
-
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Comprei o NEXUS há 2 meses e já recuperei o investimento. O sistema de gerenciamento de risco é sensacional, nunca tive perdas grandes. Recomendo!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div>
-                            <h4>Carlos Silva</h4>
-                            <span>Trader há 3 anos</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Testei vários robôs e o NEXUS é o único que realmente funciona. A proteção de stop loss dinâmico salvou minha conta várias vezes. Vale cada centavo!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div>
-                            <h4>Mariana Costa</h4>
-                            <span>Investidora</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-card">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p>"Incrível! Opera sozinho enquanto trabalho. O painel mostra tudo em tempo real. Suporte do desenvolvedor é nota 10. Melhor compra do ano!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-avatar">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div>
-                            <h4>Roberto Almeida</h4>
-                            <span>Empresário</span>
-                        </div>
-                    </div>
+                    <p>Teste os 23 botões e todos os recursos. Se não gostar por QUALQUER motivo, devolvemos 100% do seu dinheiro.</p>
                 </div>
             </div>
         </div>
@@ -441,33 +655,43 @@
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Preciso de experiência em trading?</h3>
-                    <p>Não! O NEXUS é 100% automatizado. Configure uma vez e deixe trabalhar. Ideal para iniciantes e profissionais.</p>
+                    <h3><i class="fas fa-question-circle"></i> Quantos botões tem o NEXUS?</h3>
+                    <p><strong>23 botões clicáveis:</strong> 6 volumes rápidos + 6 execução de ordens + 5 gerenciamento + 2 ferramentas + 4 controles de interface. Mais 2 botões no painel de licença quando expirada.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Funciona em qualquer corretora?</h3>
-                    <p>Sim! Funciona em qualquer corretora que use MetaTrader 5, tanto contas HEDGE quanto NETTING.</p>
+                    <h3><i class="fas fa-question-circle"></i> Os botões funcionam em qualquer ativo?</h3>
+                    <p>Sim! Os 6 botões de volume rápido ajustam-se automaticamente ao volume mínimo/máximo do ativo. Funciona em Forex, Ouro, Índices, Ações, Criptomoedas.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Posso personalizar os botões?</h3>
+                    <p>Sim! Cada categoria tem inputs para mostrar/ocultar: ShowVolumeButtons, ShowMarketButtons, ShowBidAskButtons, ShowCloseButtons, etc.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Funciona em conta NETTING (XP, Modal, Rico)?</h3>
+                    <p>Sim! Detecção automática + 2 sistemas de fechamento parcial exclusivos para NETTING. Todos os 23 botões funcionam perfeitamente.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3><i class="fas fa-question-circle"></i> Preciso de experiência em trading?</h3>
+                    <p>Não! O NEXUS é 100% automatizado. Configure uma vez e deixe trabalhar. Os 23 botões são opcionais para controle manual.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3><i class="fas fa-question-circle"></i> Qual o capital mínimo recomendado?</h3>
-                    <p>Recomendamos começar com pelo menos USD 100-500 para ter margem de segurança e aproveitar o gerenciamento de risco.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Vou receber atualizações?</h3>
-                    <p>Sim! Todas as atualizações e melhorias são 100% GRATUITAS durante o período da sua licença.</p>
+                    <p>Recomendamos começar com USD 100-500 para ter margem de segurança. Use os botões de volume rápido (0.01 a 5.00) conforme seu capital.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3><i class="fas fa-question-circle"></i> Como é o suporte?</h3>
-                    <p>Suporte rápido via WhatsApp, Telegram e Email. Respondemos em até 2 horas durante horário comercial.</p>
+                    <p>Suporte rápido via WhatsApp, Telegram e Email. Respondemos em até 2 horas durante horário comercial. Plano Vitalício tem suporte VIP.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Posso usar em várias contas?</h3>
-                    <p>Depende do plano: Mensal (1 conta), Trimestral (2 contas), Vitalício (3 contas). Contas extras sob consulta.</p>
+                    <h3><i class="fas fa-question-circle"></i> Vou receber atualizações?</h3>
+                    <p>Sim! Bugs e melhorias: vitalícias em todos os planos. Novas features: 1 ano grátis (Mensal/Trimestral) ou eternas (Vitalício).</p>
                 </div>
             </div>
         </div>
@@ -477,8 +701,8 @@
     <section class="cta-final">
         <div class="container">
             <div class="cta-content">
-                <h2>Pronto Para Transformar Seu Trading?</h2>
-                <p>Junte-se a centenas de traders que já estão lucrando com o NEXUS TRADING PRO IA</p>
+                <h2>Pronto Para Operar com 23 Botões Profissionais?</h2>
+                <p>Junte-se a centenas de traders que já estão lucrando com o NEXUS TRADING PRO IA v4.71</p>
                 <div class="cta-buttons">
                     <a href="#contato" class="btn btn-primary btn-lg">
                         <i class="fas fa-rocket"></i> Adquirir Agora
@@ -488,7 +712,7 @@
                     </a>
                 </div>
                 <p class="cta-guarantee">
-                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias | Pagamento 100% seguro
+                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias | 23 botões + 3 painéis + 9.193 linhas de código
                 </p>
             </div>
         </div>
@@ -500,7 +724,7 @@
             <div class="section-header">
                 <span class="section-badge">📞 Entre em Contato</span>
                 <h2>Fale Conosco</h2>
-                <p>Estamos prontos para tirar suas dúvidas</p>
+                <p>Estamos prontos para tirar suas dúvidas sobre os 23 botões e recursos</p>
             </div>
 
             <div class="contact-grid">
@@ -537,7 +761,8 @@
                         <i class="fas fa-chart-line"></i>
                         <span>NEXUS TRADING PRO IA</span>
                     </div>
-                    <p>Robô profissional de trading automatizado para MetaTrader 5</p>
+                    <p>Robô profissional MT5 com 23 botões clicáveis</p>
+                    <p><strong>v4.71</strong> | 9.193 linhas | Bilíngue PT/EN</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -548,8 +773,8 @@
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>
                     <a href="#recursos">Recursos</a>
+                    <a href="#botoes">23 Botões</a>
                     <a href="#precos">Preços</a>
-                    <a href="#depoimentos">Depoimentos</a>
                     <a href="#contato">Contato</a>
                 </div>
 
@@ -562,16 +787,17 @@
                 </div>
 
                 <div class="footer-links">
-                    <h4>Informações</h4>
-                    <p><i class="fas fa-code"></i> Versão 4.71</p>
-                    <p><i class="fas fa-calendar"></i> Atualizado em 2025</p>
-                    <p><i class="fas fa-users"></i> 500+ clientes ativos</p>
+                    <h4>Especificações</h4>
+                    <p><i class="fas fa-th"></i> 23 Botões Clicáveis</p>
+                    <p><i class="fas fa-columns"></i> 3 Painéis Completos</p>
+                    <p><i class="fas fa-code"></i> 9.193 linhas de código</p>
+                    <p><i class="fas fa-calendar"></i> Versão 4.71 (Dez 2025)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024-2025 NEXUS TRADING PRO IA. Todos os direitos reservados.</p>
-                <p class="disclaimer">⚠️ Trading envolve risco. Resultados passados não garantem resultados futuros.</p>
+                <p>&copy; 2024-2025 NEXUS TRADING PRO IA v4.71. Todos os direitos reservados.</p>
+                <p class="disclaimer">⚠️ Trading envolve risco. Resultados passados não garantem resultados futuros. Os 23 botões são ferramentas profissionais que requerem conhecimento básico de trading.</p>
             </div>
         </div>
     </footer>
@@ -584,3 +810,4 @@
     <script src="script.js"></script>
 </body>
 </html>
+Atualização completa: 23 botões + 3 painéis + detalhamento total
