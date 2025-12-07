@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="NEXUS TRADING PRO IA v4.71 - Robô MT5 100% automatizado com 8 filtros técnicos IA, 7 proteções automáticas, estratégias customizáveis. Funciona em TickMill, IC Markets, XP, Modal e todas corretoras MT5.">
-    <meta name="keywords" content="robô trading automatizado, MetaTrader 5, EA profissional, trading IA, forex automatizado, bitcoin MT5, ouro automatizado, índices, NETTING, HEDGE, TickMill, IC Markets, XP Investimentos">
-    <title>NEXUS TRADING PRO IA v4.71 - Robô Trading 100% Automatizado MT5</title>
+    <meta name="description" content="NEXUS TRADING PRO IA v4.71 - Robô MT5 com 23 botões clicáveis, 3 painéis completos, compatibilidade HEDGE+NETTING, 8 filtros técnicos e 7 proteções simultâneas.">
+    <meta name="keywords" content="robô trading, MetaTrader 5, EA, 23 botões, trading automatizado, forex, ouro, índices, NETTING, HEDGE">
+    <title>NEXUS TRADING PRO IA v4.71 - 23 Botões + 3 Painéis Profissionais</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -162,9 +162,169 @@
         .highlight-row td:first-child {
             background: linear-gradient(90deg, #ffc107 0%, #fff3cd 100%) !important;
         }
+        
+        /* Estilos para galeria de imagens profissional */
+        .image-showcase {
+            max-width: 1200px;
+            margin: 40px auto 80px;
+        }
+        
+        .image-container {
+            background: rgba(255,255,255,0.05);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            overflow: hidden;
+        }
+        
+        .image-container:hover {
+            background: rgba(255,255,255,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+        
+        .image-container h3 {
+            color: #ffd700;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+        
+        .image-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border: 3px solid rgba(255,215,0,0.3);
+            transition: all 0.4s ease;
+        }
+        
+        .image-wrapper:hover {
+            border-color: rgba(255,215,0,0.6);
+            box-shadow: 0 15px 45px rgba(255,215,0,0.3);
+        }
+        
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        
+        .image-wrapper:hover img {
+            transform: scale(1.05);
+        }
+        
+        .image-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        .image-wrapper:hover .image-overlay {
+            opacity: 1;
+        }
+        
+        .zoom-icon {
+            color: white;
+            font-size: 3em;
+            text-shadow: 0 0 20px rgba(255,255,255,0.8);
+        }
+        
+        .image-container p {
+            margin-top: 15px;
+            color: #ccc;
+            font-size: 1.05em;
+        }
+        
+        .click-hint {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 16px;
+            background: rgba(255,215,0,0.2);
+            border-radius: 20px;
+            color: #ffd700;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+        
+        /* Modal Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.95);
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+        }
+        
+        .lightbox.active {
+            display: flex;
+        }
+        
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            box-shadow: 0 0 50px rgba(255,215,0,0.5);
+            border-radius: 10px;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10000;
+            transition: all 0.3s ease;
+        }
+        
+        .lightbox-close:hover {
+            color: #ffd700;
+            transform: scale(1.2);
+        }
+        
+        /* Grid responsivo para 2 imagens lado a lado */
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        @media (max-width: 768px) {
+            .images-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Visualização ampliada">
+    </div>
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -176,7 +336,7 @@
                 </div>
                 <div class="nav-links">
                     <a href="#recursos">Recursos</a>
-                    <a href="#botoes">Como Funciona</a>
+                    <a href="#botoes">23 Botões</a>
                     <a href="#precos">Preços</a>
                     <a href="#contato" class="btn-nav">Adquirir Agora</a>
                 </div>
@@ -186,36 +346,36 @@
         <div class="hero-content">
             <div class="container">
                 <div class="hero-text">
-                    <span class="badge">🤖 Versão 4.71 - Trading 100% Automatizado | Bilíngue PT/EN</span>
-                    <h1>Robô MT5 com <span class="gradient-text">IA de Trading Profissional</span></h1>
-                    <p class="hero-subtitle">Sistema Automatizado Completo + 8 Filtros Técnicos + 7 Proteções Inteligentes + Super Boleta Profissional</p>
+                    <span class="badge">✨ Versão 4.71 - 9.193 linhas | Bilíngue PT/EN</span>
+                    <h1>O Robô MT5 com <span class="gradient-text">23 Botões Clicáveis</span></h1>
+                    <p class="hero-subtitle">3 Painéis Completos + Trading Visual + Compatibilidade HEDGE+NETTING + 8 Filtros + 7 Proteções</p>
                     
-                    <!-- DESTAQUE DO SISTEMA AUTOMATIZADO -->
+                    <!-- DESTAQUE DOS 23 BOTÕES -->
                     <div class="highlight-box">
-                        <h3>🚀 TRADING 100% AUTOMATIZADO</h3>
-                        <p>8 Filtros Técnicos IA + 7 Camadas de Proteção + Gestão de Risco Inteligente<br>+ BÔNUS: Uma Super Boleta com 23 Botões e Teclas de Atalho + Painel Inferior Completo<br>Modo manual profissional para quando você quiser operar</p>
+                        <h3>🎛️ 23 BOTÕES CLICÁVEIS PROFISSIONAIS</h3>
+                        <p>6 Volumes Rápidos + 6 Execução de Ordens + 5 Gerenciamento<br>+ 2 Ferramentas Avançadas + 4 Controles de Interface</p>
                     </div>
                     
                     <div class="hero-stats">
                         <div class="stat">
-                            <i class="fas fa-robot"></i>
+                            <i class="fas fa-th"></i>
                             <div>
-                                <h3>100%</h3>
-                                <p>Automatizado</p>
+                                <h3>23</h3>
+                                <p>Botões Clicáveis</p>
                             </div>
                         </div>
                         <div class="stat">
-                            <i class="fas fa-brain"></i>
+                            <i class="fas fa-columns"></i>
                             <div>
-                                <h3>8</h3>
-                                <p>Filtros Técnicos IA</p>
+                                <h3>3</h3>
+                                <p>Painéis Completos</p>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-shield-alt"></i>
                             <div>
                                 <h3>7</h3>
-                                <p>Proteções Simultâneas</p>
+                                <p>Proteções Ativas</p>
                             </div>
                         </div>
                     </div>
@@ -224,8 +384,8 @@
                         <a href="#precos" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> Começar Agora
                         </a>
-                        <a href="#recursos" class="btn btn-secondary">
-                            <i class="fas fa-robot"></i> Ver Como Funciona
+                        <a href="#botoes" class="btn btn-secondary">
+                            <i class="fas fa-th"></i> Ver os 23 Botões
                         </a>
                     </div>
 
@@ -247,57 +407,52 @@
     <section id="recursos" class="features">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">🤖 Sistema Profissional</span>
+                <span class="section-badge">💎 Recursos Exclusivos</span>
                 <h2>Por Que o NEXUS TRADING PRO IA v4.71?</h2>
-                <p>O robô mais completo do Brasil: Trading 100% automatizado + controle manual profissional</p>
+                <p>O único robô brasileiro com 23 botões clicáveis e controle total</p>
             </div>
 
             <div class="features-grid">
-                <!-- DESTAQUE: TRADING AUTOMATIZADO -->
+                <!-- DESTAQUE: 23 BOTÕES -->
                 <div class="feature-card featured">
-                    <div class="popular-badge">🚀 Principal</div>
-                    <div class="feature-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Trading 100% Automatizado</h3>
-                    <p>Sistema completo de trading com IA - opere enquanto dorme!</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> 8 Filtros Técnicos Inteligentes</li>
-                        <li><i class="fas fa-check"></i> 7 Proteções de Capital Simultâneas</li>
-                        <li><i class="fas fa-check"></i> Análise Multi-Timeframe (MTF)</li>
-                        <li><i class="fas fa-check"></i> Gestão de Risco Automática</li>
-                        <li><i class="fas fa-check"></i> Execução 24/7 sem intervenção</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>8 Filtros Técnicos IA</h3>
-                    <p>Cérebro do robô: análise multi-indicadores em tempo real.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Stochastic Duplo (Main + Signal)</li>
-                        <li><i class="fas fa-check"></i> RSI Adaptativo + Sobrecompra/Venda</li>
-                        <li><i class="fas fa-check"></i> Moving Averages (Local + Externa)</li>
-                        <li><i class="fas fa-check"></i> Price Action + Padrões de Candlestick</li>
-                        <li><i class="fas fa-check"></i> Multi-Timeframe + Filtro de Spread</li>
-                    </ul>
-                </div>
-
-                <div class="feature-card">
+                    <div class="popular-badge">🏆 Exclusivo</div>
                     <div class="feature-icon">
                         <i class="fas fa-th"></i>
                     </div>
-                    <h3>BÔNUS: SUPER BOLETA Profissional</h3>
-                    <p>Interface completa com 23 botões clicáveis + painel informativo + atalhos de teclado e mouse!</p>
+                    <h3>23 Botões Clicáveis</h3>
+                    <p>Controle total na palma da mão - o mais completo do Brasil!</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <strong>Painel Lateral:</strong> 21 botões (250x700px) - 6 Volumes, 6 Execução, 5 Gerenciamento, 2 Ferramentas, 2 Controles</li>
-                        <li><i class="fas fa-check"></i> <strong>Painel Inferior:</strong> 900x190px - 4 colunas (Configuração, Status, Lucros, Posições) com 25+ métricas em tempo real</li>
-                        <li><i class="fas fa-check"></i> <strong>Trading Visual:</strong> Shift+Click=Compra | Ctrl+Click=Venda no gráfico</li>
-                        <li><i class="fas fa-check"></i> <strong>Atalhos:</strong> M=Minimizar Painel | Q=Modo Visual ON/OFF</li>
-                        <li><i class="fas fa-check"></i> <strong>Interface:</strong> Exibir/Ocultar botões, painéis independentes, cores customizáveis</li>
-                        <li><i class="fas fa-check"></i> <strong>Gestão Visual:</strong> INVERT, BREAK EVEN, CLOSE ALL em 1 clique</li>
+                        <li><i class="fas fa-check"></i> 6 Volumes Rápidos (0.01 até 5.00)</li>
+                        <li><i class="fas fa-check"></i> 6 Execução (Market, BID/ASK, Stop)</li>
+                        <li><i class="fas fa-check"></i> 5 Gerenciamento (Close All, Buy/Sell)</li>
+                        <li><i class="fas fa-check"></i> 2 Ferramentas (Invert, BreakEven)</li>
+                        <li><i class="fas fa-check"></i> 4 Controles (Panel, Visual, Hide)</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-columns"></i>
+                    </div>
+                    <h3>3 Painéis Completos</h3>
+                    <p>Interface profissional com informações em tempo real.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Lateral 250x700px (21 botões)</li>
+                        <li><i class="fas fa-check"></i> Inferior 900x190px (4 colunas)</li>
+                        <li><i class="fas fa-check"></i> Licença automática (2 botões)</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mouse-pointer"></i>
+                    </div>
+                    <h3>Trading Visual com Mouse</h3>
+                    <p>Opere direto no gráfico com Shift/Ctrl + Click.</p>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Shift+Click = Compra</li>
+                        <li><i class="fas fa-check"></i> Ctrl+Click = Venda</li>
+                        <li><i class="fas fa-check"></i> Hotkey Q ativa/desativa</li>
                     </ul>
                 </div>
 
@@ -318,46 +473,75 @@
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>7 Proteções Automáticas</h3>
-                    <p>Gestão de risco inteligente protege seu capital 24/7.</p>
+                    <h3>7 Proteções Simultâneas</h3>
+                    <p>Capital protegido com múltiplas camadas de segurança.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> Breakeven Automático (3 modos)</li>
-                        <li><i class="fas fa-check"></i> Trailing Stop Inteligente (2 sistemas)</li>
-                        <li><i class="fas fa-check"></i> Take Profit Dinâmico</li>
-                        <li><i class="fas fa-check"></i> Drawdown Protetor (Daily/Total/Percent)</li>
-                        <li><i class="fas fa-check"></i> Limite Lucro/Perda Diária</li>
+                        <li><i class="fas fa-check"></i> Breakeven (3 modos)</li>
+                        <li><i class="fas fa-check"></i> Trailing Stop (2 sistemas)</li>
+                        <li><i class="fas fa-check"></i> TP Dinâmico + Drawdown</li>
                     </ul>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
+                        <i class="fas fa-filter"></i>
                     </div>
-                    <h3>Sistema de Eventos Inteligente</h3>
-                    <p>Controle automático de horários, sessões e proteção contra notícias de alto impacto!</p>
+                    <h3>8 Filtros Técnicos</h3>
+                    <p>Sistema inteligente de análise multi-indicadores.</p>
                     <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> <strong>Sessões de Trading:</strong> Asiática, Londres, NY - Ativa/desativa automático por sessão</li>
-                        <li><i class="fas fa-check"></i> <strong>Horário Customizado:</strong> Início/Fim de operação (ex: 09:00-17:00), Horário de almoço, Fechamento antes do close</li>
-                        <li><i class="fas fa-check"></i> <strong>Dias da Semana:</strong> Segunda a Sexta com filtros individuais (ex: desabilita sexta-feira)</li>
-                        <li><i class="fas fa-check"></i> <strong>Detector de Notícias:</strong> Para trading X minutos antes/depois de eventos econômicos (NFP, FOMC, CPI)</li>
-                        <li><i class="fas fa-check"></i> <strong>Proteção Spread:</strong> Bloqueia entradas se spread > limite configurado (evita custos altos)</li>
-                        <li><i class="fas fa-check"></i> <strong>Timezone Global:</strong> Auto-ajuste GMT/GMT+3 para qualquer corretora do mundo</li>
+                        <li><i class="fas fa-check"></i> Stochastic (2 tipos)</li>
+                        <li><i class="fas fa-check"></i> RSI, MAs (local + externa)</li>
+                        <li><i class="fas fa-check"></i> Price Action, MTF, Continuity</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cogs"></i>
+    <!-- SEÇÃO DE IMAGENS -->
+    <section id="imagens" class="image-showcase-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">📸 Interface Real do Sistema</span>
+                <h2>Veja a Super Boleta em Ação</h2>
+                <p>Clique nas imagens para visualizar em tela cheia</p>
+            </div>
+
+            <div class="image-showcase">
+                <div class="image-container">
+                    <div class="image-wrapper" onclick="openLightbox('images/painel-lateral.png')">
+                        <img src="images/painel-lateral.png" alt="Painel Lateral com 21 Botões" loading="lazy">
+                        <div class="image-overlay">
+                            <i class="fas fa-search-plus zoom-icon"></i>
+                        </div>
                     </div>
-                    <h3>Estratégias Customizáveis</h3>
-                    <p>Adicione suas próprias estratégias e indicadores.</p>
-                    <ul class="feature-list">
-                        <li><i class="fas fa-check"></i> 150+ Parâmetros Editáveis</li>
-                        <li><i class="fas fa-check"></i> Integração de Indicadores Customizados</li>
-                        <li><i class="fas fa-check"></i> Lógicas de Entrada/Saída Personalizadas</li>
-                        <li><i class="fas fa-check"></i> Money Management Avançado</li>
-                        <li><i class="fas fa-check"></i> Sistema Modular Expansível</li>
-                    </ul>
+                    <h3>Painel Lateral</h3>
+                    <p>21 botões clicáveis: 6 Volumes + 6 Execução + 5 Gerenciamento + 2 Ferramentas + 2 Controles</p>
+                    <span class="click-hint">🔍 Clique para ampliar</span>
+                </div>
+
+                <div class="image-container">
+                    <div class="image-wrapper" onclick="openLightbox('images/painel-inferior.png')">
+                        <img src="images/painel-inferior.png" alt="Painel Inferior Informativo" loading="lazy">
+                        <div class="image-overlay">
+                            <i class="fas fa-search-plus zoom-icon"></i>
+                        </div>
+                    </div>
+                    <h3>Painel Inferior</h3>
+                    <p>900x190px - 4 colunas: Configuração, Status, Lucros e Posições em tempo real</p>
+                    <span class="click-hint">🔍 Clique para ampliar</span>
+                </div>
+
+                <div class="image-container full-width">
+                    <div class="image-wrapper" onclick="openLightbox('images/interface-completa.png')">
+                        <img src="images/interface-completa.png" alt="Interface Completa no MetaTrader 5" loading="lazy">
+                        <div class="image-overlay">
+                            <i class="fas fa-search-plus zoom-icon"></i>
+                        </div>
+                    </div>
+                    <h3>Interface Completa no MT5</h3>
+                    <p>Visão geral: Painéis lateral + inferior integrados ao gráfico de trading</p>
+                    <span class="click-hint">🔍 Clique para ampliar</span>
                 </div>
             </div>
         </div>
@@ -367,9 +551,9 @@
     <section id="botoes" class="dark-section">
         <div class="container">
             <div class="section-header">
-                <span class="section-badge">🎯 Super Boleta Profissional</span>
-                <h2>SUPER BOLETA: 23 Botões + Painel Informativo + Atalhos</h2>
-                <p class="section-subtitle">Interface completa: Painel Lateral (250x700px) + Painel Inferior (900x190px) + Trading Visual no Gráfico</p>
+                <span class="section-badge">🎯 Controle Profissional</span>
+                <h2>Detalhamento dos 23 Botões Clicáveis</h2>
+                <p class="section-subtitle">Layout otimizado para traders profissionais com controle total</p>
             </div>
 
             <div class="buttons-breakdown">
@@ -456,51 +640,9 @@
                     </ul>
                 </div>
 
-                <!-- Categoria 5: Painel Informativo -->
+                <!-- Categoria 5: Controles -->
                 <div class="button-category">
-                    <h3>📊 CATEGORIA 5: Painel Informativo Inferior (900x190px)</h3>
-                    <p><strong>🎯 Super Painel com 4 Colunas de Dados em Tempo Real:</strong></p>
-                    <ul>
-                        <li>✅ <strong>COLUNA 1 - Configuração Ativa:</strong>
-                            <ul style="margin-top: 10px;">
-                                <li>📦 Volume Atual | 🎯 Take Profit | 🛑 Stop Loss | 💰 Breakeven (pts)</li>
-                                <li>📈 Trailing Stop (pts) | 🔢 Magic Number | 📝 Comentário</li>
-                            </ul>
-                        </li>
-                        <li>✅ <strong>COLUNA 2 - Status do Sistema:</strong>
-                            <ul style="margin-top: 10px;">
-                                <li>🟢 AutoTrading Enabled (Verde=Ativo | Vermelho=Desligado)</li>
-                                <li>🤖 Modo: HEDGE ou NETTING (auto-detectado)</li>
-                                <li>📊 Spread Atual vs Máximo Permitido</li>
-                                <li>⏰ Horário do Servidor | 🌍 Timezone GMT</li>
-                                <li>🎨 Modo Visual: ✅ ON (Shift/Ctrl + Click habilitado)</li>
-                            </ul>
-                        </li>
-                        <li>✅ <strong>COLUNA 3 - Lucros e Performance:</strong>
-                            <ul style="margin-top: 10px;">
-                                <li>💵 Lucro Aberto (todas posições abertas)</li>
-                                <li>📅 Lucro Diário (hoje) | 📊 Lucro Semanal | 📈 Lucro Mensal</li>
-                                <li>🎯 Win Rate % (taxa de acerto)</li>
-                                <li>📉 Drawdown Atual (% e valor)</li>
-                                <li>⚠️ Limite Diário Lucro/Perda (barra de progresso)</li>
-                            </ul>
-                        </li>
-                        <li>✅ <strong>COLUNA 4 - Posições e Ordens:</strong>
-                            <ul style="margin-top: 10px;">
-                                <li>🔢 Total Posições Abertas (Buy/Sell separado)</li>
-                                <li>📦 Volume Total Aberto | 💰 Margem Utilizada</li>
-                                <li>📋 Ordens Pendentes (Buy Stop, Sell Stop, Limits)</li>
-                                <li>🕐 Tempo Médio em Posição</li>
-                                <li>🎯 Preço Médio Buy | Preço Médio Sell</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <p style="margin-top: 20px; color: #ffd700;"><strong>⚡ Atualização:</strong> Refresh automático a cada 1 segundo | Cache otimizado 200ms | Cores dinâmicas (verde=lucro, vermelho=perda)</p>
-                </div>
-
-                <!-- Categoria 6: Controles -->
-                <div class="button-category">
-                    <h3>⚙️ CATEGORIA 6: Controles de Interface (4 botões)</h3>
+                    <h3>⚙️ CATEGORIA 5: Controles de Interface (4 botões)</h3>
                     <div class="button-visual">
                         <span class="btn-demo wide teal">📊 BOTTOM PANEL</span>
                     </div>
@@ -559,13 +701,13 @@
                         <td><strong>Código</strong></td>
                         <td>9.193 linhas (English) | 9.248 (Português)</td>
                     </tr>
-                    <tr class="highlight-row">
-                        <td><strong>🔧 Estratégias Customizáveis</strong></td>
-                        <td><strong>150+ parâmetros editáveis</strong> organizados em 20 grupos | Sistema modular expansível</td>
+                    <tr>
+                        <td><strong>Parâmetros</strong></td>
+                        <td>150+ organizados em 20 grupos com █ separadores</td>
                     </tr>
                     <tr>
                         <td><strong>Funções</strong></td>
-                        <td>180+ otimizadas | Arquitetura modular para adicionar indicadores e lógicas customizadas</td>
+                        <td>180+ otimizadas</td>
                     </tr>
                     <tr>
                         <td><strong>Filtros Técnicos</strong></td>
@@ -624,36 +766,6 @@
                     <p>Petróleo, Gás Natural, Café</p>
                 </div>
             </div>
-
-            <div style="margin-top: 80px; padding: 50px; background: rgba(255,255,255,0.05); border-radius: 20px; backdrop-filter: blur(10px);">
-                <h3 style="text-align: center; color: #ffd700; font-size: 1.8em; margin-bottom: 40px;">🏛️ Corretoras Compatíveis</h3>
-                
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
-                    <div style="text-align: left;">
-                        <h4 style="color: #4caf50; margin-bottom: 15px;"><i class="fas fa-flag"></i> 🇧🇷 Brasil</h4>
-                        <p style="line-height: 2; color: white;">XP Investimentos, Modal, Rico, Clear, Ativa, Índice, Toro, Inter, Genial</p>
-                    </div>
-                    
-                    <div style="text-align: left;">
-                        <h4 style="color: #2196f3; margin-bottom: 15px;"><i class="fas fa-globe"></i> Forex/Ouro/Índices</h4>
-                        <p style="line-height: 2; color: white;">TickMill, IC Markets, Pepperstone, FBS, XM, FXTM, Exness, Admiral Markets, Roboforex, Alpari, HotForex</p>
-                    </div>
-                    
-                    <div style="text-align: left;">
-                        <h4 style="color: #ff9800; margin-bottom: 15px;"><i class="fab fa-bitcoin"></i> Criptomoedas</h4>
-                        <p style="line-height: 2; color: white;">Binance, Bybit, OKX, Kraken, Bitget (via MT5)</p>
-                    </div>
-                    
-                    <div style="text-align: left;">
-                        <h4 style="color: #9c27b0; margin-bottom: 15px;"><i class="fas fa-chart-line"></i> Ações/ETFs</h4>
-                        <p style="line-height: 2; color: white;">Interactive Brokers, AvaTrade, Plus500, eToro (via MT5)</p>
-                    </div>
-                </div>
-                
-                <p style="text-align: center; margin-top: 30px; color: #ffd700; font-size: 1.1em;">
-                    ✅ <strong>Funciona em QUALQUER corretora que ofereça MetaTrader 5</strong> ✅
-                </p>
-            </div>
         </div>
     </section>
 
@@ -663,7 +775,7 @@
             <div class="section-header">
                 <span class="section-badge">💰 Investimento</span>
                 <h2>Escolha o Plano Ideal Para Você</h2>
-                <p>Trading 100% automatizado + 8 filtros IA + 7 proteções + BÔNUS: 23 botões manuais</p>
+                <p>Controle total com 23 botões + 3 painéis profissionais</p>
             </div>
 
             <div class="pricing-grid">
@@ -674,13 +786,12 @@
                         <p class="price-subtitle">Ideal para testar</p>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> <strong>Trading 100% automatizado</strong></li>
-                        <li><i class="fas fa-check"></i> 8 filtros técnicos IA</li>
-                        <li><i class="fas fa-check"></i> 7 proteções automáticas</li>
-                        <li><i class="fas fa-check"></i> Gestão de risco inteligente</li>
-                        <li><i class="fas fa-check"></i> HEDGE + NETTING universal</li>
-                        <li><i class="fas fa-check"></i> <strong>BÔNUS: Super Boleta</strong> (23 botões + painel informativo + atalhos)</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 1 conta real</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
                         <li><i class="fas fa-check"></i> Suporte WhatsApp</li>
                         <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                     </ul>
@@ -697,14 +808,12 @@
                         <span class="discount">Economize R$ 194</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> <strong>Trading 100% automatizado</strong></li>
-                        <li><i class="fas fa-check"></i> 8 filtros técnicos IA</li>
-                        <li><i class="fas fa-check"></i> 7 proteções automáticas</li>
-                        <li><i class="fas fa-check"></i> Gestão de risco inteligente</li>
-                        <li><i class="fas fa-check"></i> Análise Multi-Timeframe</li>
-                        <li><i class="fas fa-check"></i> HEDGE + NETTING universal</li>
-                        <li><i class="fas fa-check"></i> <strong>BÔNUS: Super Boleta</strong> (23 botões + painel informativo + atalhos)</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 2 contas reais</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
                         <li><i class="fas fa-check"></i> Suporte prioritário</li>
                         <li><i class="fas fa-star"></i> Grupo VIP Telegram</li>
                         <li><i class="fas fa-check"></i> Garantia 7 dias</li>
@@ -720,15 +829,12 @@
                         <span class="discount">Economize R$ 2.567</span>
                     </div>
                     <ul class="pricing-features">
-                        <li><i class="fas fa-check"></i> <strong>Trading 100% automatizado</strong></li>
-                        <li><i class="fas fa-check"></i> 8 filtros técnicos IA</li>
-                        <li><i class="fas fa-check"></i> 7 proteções automáticas</li>
-                        <li><i class="fas fa-check"></i> Gestão de risco inteligente</li>
-                        <li><i class="fas fa-check"></i> Análise Multi-Timeframe</li>
-                        <li><i class="fas fa-check"></i> Money Management avançado</li>
-                        <li><i class="fas fa-check"></i> HEDGE + NETTING universal</li>
-                        <li><i class="fas fa-check"></i> <strong>BÔNUS: Super Boleta</strong> (23 botões + painel + atalhos + trading visual)</li>
+                        <li><i class="fas fa-check"></i> <strong>23 botões clicáveis</strong></li>
+                        <li><i class="fas fa-check"></i> 3 painéis completos</li>
                         <li><i class="fas fa-check"></i> 3 contas reais</li>
+                        <li><i class="fas fa-check"></i> Trading visual (Shift/Ctrl + Click)</li>
+                        <li><i class="fas fa-check"></i> HEDGE + NETTING</li>
+                        <li><i class="fas fa-check"></i> 8 filtros + 7 proteções</li>
                         <li><i class="fas fa-check"></i> Acesso VITALÍCIO</li>
                         <li><i class="fas fa-check"></i> Atualizações ETERNAS</li>
                         <li><i class="fas fa-star"></i> Suporte VIP</li>
@@ -743,7 +849,7 @@
                 <i class="fas fa-shield-alt"></i>
                 <div>
                     <h3>Garantia Incondicional de 7 Dias</h3>
-                    <p>Teste o robô automatizado, os 8 filtros IA, as 7 proteções e todos os recursos. Se não gostar por QUALQUER motivo, devolvemos 100% do seu dinheiro.</p>
+                    <p>Teste os 23 botões e todos os recursos. Se não gostar por QUALQUER motivo, devolvemos 100% do seu dinheiro.</p>
                 </div>
             </div>
         </div>
@@ -797,13 +903,13 @@
                         </ul>
                     </div>
 
-                    <div style="margin-top: 30px; padding: 25px; background: rgba(76,175,80,0.1); border-left: 4px solid #4caf50; border-radius: 10px;">
-                        <h4 style="color: #4caf50; margin-bottom: 15px;"><i class="fas fa-cog"></i> Estratégias Customizáveis</h4>
+                    <div style="margin-top: 30px; padding: 25px; background: rgba(220,53,69,0.1); border-left: 4px solid #dc3545; border-radius: 10px;">
+                        <h4 style="color: #ff6b6b; margin-bottom: 15px;"><i class="fas fa-exclamation-triangle"></i> Importante</h4>
                         <p style="text-align: left; color: white; line-height: 1.8;">
-                            ✨ <strong>Adicione suas próprias estratégias!</strong> O NEXUS permite integração de novos indicadores customizados, padrões de candlestick personalizados e lógicas de entrada/saída customizadas.
+                            ⚠️ <strong>Os arquivos acima são demonstrativos.</strong> O download real será enviado por email após a confirmação do pagamento, junto com sua chave de licença personalizada.
                         </p>
                         <p style="text-align: left; color: white; line-height: 1.8; margin-top: 15px;">
-                            🛠️ <strong>150+ parâmetros editáveis</strong> organizados em 20 grupos para adaptar o robô ao seu estilo de trading. Sistema modular facilita expansão e otimização.
+                            🔐 Cada licença é vinculada ao número da sua conta MT5 para garantir segurança.
                         </p>
                     </div>
 
@@ -827,37 +933,28 @@
 
             <div class="faq-grid">
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> O robô é realmente automatizado?</h3>
-                    <p><strong>Sim, 100%!</strong> O NEXUS opera sozinho 24/7: analisa 8 filtros técnicos, abre/fecha posições, gerencia risco com 7 proteções simultâneas. Você só configura uma vez e deixa trabalhar. BÔNUS: 23 botões para operação manual quando quiser.</p>
+                    <h3><i class="fas fa-question-circle"></i> Quantos botões tem o NEXUS?</h3>
+                    <p><strong>23 botões clicáveis:</strong> 6 volumes rápidos + 6 execução de ordens + 5 gerenciamento + 2 ferramentas + 4 controles de interface. Mais 2 botões no painel de licença quando expirada.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Quais são os 8 filtros técnicos?</h3>
-                    <p><strong>Cérebro do robô:</strong> 1) Stochastic Duplo, 2) RSI Adaptativo, 3) Moving Average Local, 4) MA Externa (timeframe maior), 5) Price Action, 6) Multi-Timeframe (MTF), 7) Continuity Filter, 8) Spread Control. Todos trabalham juntos para filtrar operações de alta qualidade.</p>
+                    <h3><i class="fas fa-question-circle"></i> Os botões funcionam em qualquer ativo?</h3>
+                    <p>Sim! Os 6 botões de volume rápido ajustam-se automaticamente ao volume mínimo/máximo do ativo. Funciona em Forex, Ouro, Índices, Ações, Criptomoedas.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Como funcionam as 7 proteções?</h3>
-                    <p><strong>Gestão de risco 24/7:</strong> 1) Breakeven automático (3 modos), 2) Trailing Stop inteligente (2 sistemas), 3) Take Profit dinâmico, 4) Drawdown protetor (daily/total/percent), 5) Limite de perda diária, 6) Limite de lucro diário, 7) Correlação entre ativos. Seu capital sempre protegido!</p>
+                    <h3><i class="fas fa-question-circle"></i> Posso personalizar os botões?</h3>
+                    <p>Sim! Cada categoria tem inputs para mostrar/ocultar: ShowVolumeButtons, ShowMarketButtons, ShowBidAskButtons, ShowCloseButtons, etc.</p>
                 </div>
 
                 <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Em quais corretoras funciona?</h3>
-                    <p><strong>Funciona em TODAS as corretoras MT5!</strong> Detecção automática HEDGE/NETTING + sistemas exclusivos de fechamento parcial.</p>
-                    <p style="margin-top: 10px;"><strong>🇧🇷 Brasil:</strong> XP Investimentos, Modal, Rico, Clear, Ativa Investimentos, Índice, Toro, Inter, Genial</p>
-                    <p style="margin-top: 10px;"><strong>🌎 Internacional (Forex/Ouro/Índices):</strong> TickMill, IC Markets, Pepperstone, FBS, XM, FXTM, Exness, Admiral Markets, Roboforex, Alpari, HotForex</p>
-                    <p style="margin-top: 10px;"><strong>🪙 Bitcoin/Criptomoedas:</strong> Binance, Bybit, OKX, Kraken, Bitget (via MT5)</p>
-                    <p style="margin-top: 10px;"><strong>📊 Ações/ETFs:</strong> Interactive Brokers, AvaTrade, Plus500, eToro (via MT5)</p>
+                    <h3><i class="fas fa-question-circle"></i> Funciona em conta NETTING (XP, Modal, Rico)?</h3>
+                    <p>Sim! Detecção automática + 2 sistemas de fechamento parcial exclusivos para NETTING. Todos os 23 botões funcionam perfeitamente.</p>
                 </div>
 
                 <div class="faq-item">
                     <h3><i class="fas fa-question-circle"></i> Preciso de experiência em trading?</h3>
-                    <p><strong>Não!</strong> O NEXUS é 100% automatizado - ideal para iniciantes. Basta configurar os parâmetros (capital, risco, horários) e deixar operar. A IA faz tudo: análise técnica, entrada/saída, gestão de risco. Você aprende enquanto o robô trabalha.</p>
-                </div>
-
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Posso adicionar minhas próprias estratégias?</h3>
-                    <p><strong>Sim!</strong> O NEXUS possui <strong>150+ parâmetros editáveis</strong> organizados em 20 grupos. Você pode integrar indicadores customizados, criar lógicas de entrada/saída personalizadas, adicionar novos padrões de candlestick e ajustar completamente o money management. Sistema modular facilita expansão e otimização contínua.</p>
+                    <p>Não! O NEXUS é 100% automatizado. Configure uma vez e deixe trabalhar. Os 23 botões são opcionais para controle manual.</p>
                 </div>
 
                 <div class="faq-item">
@@ -882,8 +979,8 @@
     <section class="cta-final">
         <div class="container">
             <div class="cta-content">
-                <h2>Pronto Para Trading 100% Automatizado?</h2>
-                <p>Junte-se a centenas de traders que já operam no piloto automático com o NEXUS TRADING PRO IA v4.71</p>
+                <h2>Pronto Para Operar com 23 Botões Profissionais?</h2>
+                <p>Junte-se a centenas de traders que já estão lucrando com o NEXUS TRADING PRO IA v4.71</p>
                 <div class="cta-buttons">
                     <a href="#contato" class="btn btn-primary btn-lg">
                         <i class="fas fa-rocket"></i> Adquirir Agora
@@ -893,7 +990,7 @@
                     </a>
                 </div>
                 <p class="cta-guarantee">
-                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias | Trading 100% Automatizado + 8 Filtros IA + 7 Proteções
+                    <i class="fas fa-shield-alt"></i> Garantia de 7 dias | 23 botões + 3 painéis + 9.193 linhas de código
                 </p>
             </div>
         </div>
@@ -905,7 +1002,7 @@
             <div class="section-header">
                 <span class="section-badge">📞 Entre em Contato</span>
                 <h2>Fale Conosco</h2>
-                <p>Estamos prontos para tirar suas dúvidas sobre o robô automatizado e recursos</p>
+                <p>Estamos prontos para tirar suas dúvidas sobre os 23 botões e recursos</p>
             </div>
 
             <div class="contact-grid">
@@ -942,8 +1039,8 @@
                         <i class="fas fa-chart-line"></i>
                         <span>NEXUS TRADING PRO IA</span>
                     </div>
-                    <p>Robô MT5 100% automatizado com IA profissional</p>
-                    <p><strong>v4.71</strong> | 9.193 linhas | 8 Filtros + 7 Proteções | PT/EN</p>
+                    <p>Robô profissional MT5 com 23 botões clicáveis</p>
+                    <p><strong>v4.71</strong> | 9.193 linhas | Bilíngue PT/EN</p>
                     <div class="social-links">
                         <a href="#"><i class="fab fa-youtube"></i></a>
                         <a href="#"><i class="fab fa-instagram"></i></a>
@@ -954,7 +1051,7 @@
                 <div class="footer-links">
                     <h4>Links Rápidos</h4>
                     <a href="#recursos">Recursos</a>
-                    <a href="#botoes">Como Funciona</a>
+                    <a href="#botoes">23 Botões</a>
                     <a href="#precos">Preços</a>
                     <a href="#contato">Contato</a>
                 </div>
@@ -969,16 +1066,16 @@
 
                 <div class="footer-links">
                     <h4>Especificações</h4>
-                    <p><i class="fas fa-robot"></i> Trading 100% Automatizado</p>
-                    <p><i class="fas fa-brain"></i> 8 Filtros Técnicos IA</p>
-                    <p><i class="fas fa-shield-alt"></i> 7 Proteções Automáticas</p>
+                    <p><i class="fas fa-th"></i> 23 Botões Clicáveis</p>
+                    <p><i class="fas fa-columns"></i> 3 Painéis Completos</p>
+                    <p><i class="fas fa-code"></i> 9.193 linhas de código</p>
                     <p><i class="fas fa-calendar"></i> Versão 4.71 (Dez 2025)</p>
                 </div>
             </div>
 
             <div class="footer-bottom">
                 <p>&copy; 2024-2025 NEXUS TRADING PRO IA v4.71. Todos os direitos reservados.</p>
-                <p class="disclaimer">⚠️ Trading envolve risco. Resultados passados não garantem resultados futuros. O robô automatizado executa estratégias pré-programadas e requer configuração adequada de gestão de risco.</p>
+                <p class="disclaimer">⚠️ Trading envolve risco. Resultados passados não garantem resultados futuros. Os 23 botões são ferramentas profissionais que requerem conhecimento básico de trading.</p>
             </div>
         </div>
     </footer>
@@ -987,6 +1084,12 @@
     <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Imagem ampliada">
+    </div>
 
     <script src="script.js"></script>
 </body>
