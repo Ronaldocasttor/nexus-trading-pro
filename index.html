@@ -142,14 +142,12 @@
         .specs-table td {
             padding: 25px;
             font-size: 1.15em;
-            color: #333;
         }
         
         .specs-table td:first-child {
             background: #f8f9fa;
             width: 40%;
             font-weight: 600;
-            color: #1a1a1a;
         }
         
         .highlight-row {
@@ -159,177 +157,14 @@
         .highlight-row td {
             padding: 30px 25px !important;
             font-size: 1.2em !important;
-            color: #000 !important;
-            font-weight: 600 !important;
         }
         
         .highlight-row td:first-child {
             background: linear-gradient(90deg, #ffc107 0%, #fff3cd 100%) !important;
-            color: #000 !important;
-        }
-        
-        /* Estilos para galeria de imagens profissional */
-        .image-showcase {
-            max-width: 1200px;
-            margin: 40px auto 80px;
-        }
-        
-        .image-container {
-            background: rgba(255,255,255,0.05);
-            padding: 25px;
-            border-radius: 15px;
-            text-align: center;
-            position: relative;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            overflow: hidden;
-        }
-        
-        .image-container:hover {
-            background: rgba(255,255,255,0.08);
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
-        }
-        
-        .image-container h3 {
-            color: #ffd700;
-            margin-bottom: 20px;
-            font-size: 1.5em;
-        }
-        
-        .image-wrapper {
-            position: relative;
-            display: inline-block;
-            width: 100%;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 3px solid rgba(255,215,0,0.3);
-            transition: all 0.4s ease;
-        }
-        
-        .image-wrapper:hover {
-            border-color: rgba(255,215,0,0.6);
-            box-shadow: 0 15px 45px rgba(255,215,0,0.3);
-        }
-        
-        .image-wrapper img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.4s ease;
-        }
-        
-        .image-wrapper:hover img {
-            transform: scale(1.05);
-        }
-        
-        .image-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0,0,0,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            pointer-events: none;
-        }
-        
-        .image-wrapper:hover .image-overlay {
-            opacity: 1;
-        }
-        
-        .zoom-icon {
-            color: white;
-            font-size: 3em;
-            text-shadow: 0 0 20px rgba(255,255,255,0.8);
-        }
-        
-        .image-container p {
-            margin-top: 15px;
-            color: #ccc;
-            font-size: 1.05em;
-        }
-        
-        .click-hint {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 16px;
-            background: rgba(255,215,0,0.2);
-            border-radius: 20px;
-            color: #ffd700;
-            font-size: 0.9em;
-            font-weight: 600;
-        }
-        
-        /* Modal Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            align-items: center;
-            justify-content: center;
-            cursor: zoom-out;
-        }
-        
-        .lightbox.active {
-            display: flex;
-        }
-        
-        .lightbox img {
-            max-width: 95%;
-            max-height: 95%;
-            box-shadow: 0 0 50px rgba(255,215,0,0.5);
-            border-radius: 10px;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 30px;
-            right: 40px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 10000;
-            transition: all 0.3s ease;
-        }
-        
-        .lightbox-close:hover {
-            color: #ffd700;
-            transform: scale(1.2);
-        }
-        
-        /* Grid responsivo para 2 imagens lado a lado */
-        .images-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-            margin-bottom: 30px;
-        }
-        
-        @media (max-width: 768px) {
-            .images-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Visualização ampliada">
-    </div>
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-overlay"></div>
@@ -343,7 +178,7 @@
                     <a href="#recursos">Recursos</a>
                     <a href="#botoes">Como Funciona</a>
                     <a href="#precos">Preços</a>
-                    <a href="#contato" class="btn-nav">Adquirir Agora</a>
+                    <a href="https://pay.hotmart.com/SEU_LINK_TRIMESTRAL" target="_blank" class="btn-nav">Adquirir Agora</a>
                 </div>
             </div>
         </nav>
@@ -386,11 +221,11 @@
                     </div>
 
                     <div class="hero-buttons">
-                        <a href="#precos" class="btn btn-primary">
+                        <a href="https://pay.hotmart.com/SEU_LINK_TRIMESTRAL" target="_blank" class="btn btn-primary">
                             <i class="fas fa-rocket"></i> Começar Agora
                         </a>
-                        <a href="#botoes" class="btn btn-secondary">
-                            <i class="fas fa-th"></i> Ver os 23 Botões
+                        <a href="#recursos" class="btn btn-secondary">
+                            <i class="fas fa-robot"></i> Ver Como Funciona
                         </a>
                     </div>
 
@@ -432,7 +267,6 @@
                         <li><i class="fas fa-check"></i> Análise Multi-Timeframe (MTF)</li>
                         <li><i class="fas fa-check"></i> Gestão de Risco Automática</li>
                         <li><i class="fas fa-check"></i> Execução 24/7 sem intervenção</li>
-                        <li><i class="fas fa-check"></i> <strong>Adicione suas próprias estratégias:</strong> 150+ parâmetros editáveis, integração de indicadores customizados</li>
                     </ul>
                 </div>
 
@@ -529,55 +363,6 @@
         </div>
     </section>
 
-    <!-- SEÇÃO DE IMAGENS -->
-    <section id="imagens" class="image-showcase-section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-badge">📸 Interface Real do Sistema</span>
-                <h2>Veja a Super Boleta em Ação</h2>
-                <p>Clique nas imagens para visualizar em tela cheia</p>
-            </div>
-
-            <div class="image-showcase">
-                <div class="image-container">
-                    <h3>🎛️ Super Boleta (Painel Lateral 250x700px)</h3>
-                    <p>21 botões clicáveis: 6 Volumes + 6 Execução + 5 Gerenciamento + 2 Ferramentas + 2 Controles</p>
-                    <div class="image-wrapper" onclick="openLightbox('images/painel-lateral.png')">
-                        <img src="images/painel-lateral.png" alt="Super Boleta com 21 Botões" loading="lazy">
-                        <div class="image-overlay">
-                            <i class="fas fa-search-plus zoom-icon"></i>
-                        </div>
-                    </div>
-                    <span class="click-hint">🔍 Clique para ampliar</span>
-                </div>
-
-                <div class="image-container">
-                    <h3>📊 Painel Inferior Informativo (900x190px)</h3>
-                    <p>4 colunas em tempo real: Configuração Ativa, Status do Sistema, Lucros e Performance, Posições e Ordens</p>
-                    <div class="image-wrapper" onclick="openLightbox('images/painel-inferior.png')">
-                        <img src="images/painel-inferior.png" alt="Painel Inferior Informativo" loading="lazy">
-                        <div class="image-overlay">
-                            <i class="fas fa-search-plus zoom-icon"></i>
-                        </div>
-                    </div>
-                    <span class="click-hint">🔍 Clique para ampliar</span>
-                </div>
-
-                <div class="image-container full-width">
-                    <h3>💻 Interface Completa no MetaTrader 5</h3>
-                    <p>Visão geral: Super Boleta (lateral) + Painel Inferior integrados ao gráfico de trading profissional</p>
-                    <div class="image-wrapper" onclick="openLightbox('images/interface-completa.png')">
-                        <img src="images/interface-completa.png" alt="Interface Completa no MetaTrader 5" loading="lazy">
-                        <div class="image-overlay">
-                            <i class="fas fa-search-plus zoom-icon"></i>
-                        </div>
-                    </div>
-                    <span class="click-hint">🔍 Clique para ampliar</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SEÇÃO DETALHADA DOS 23 BOTÕES -->
     <section id="botoes" class="dark-section">
         <div class="container">
@@ -587,26 +372,52 @@
                 <p class="section-subtitle">Interface completa: Painel Lateral (250x700px) + Painel Inferior (900x190px) + Trading Visual no Gráfico</p>
             </div>
 
+            <!-- PREVIEW VISUAL DA BOLETA E PAINEL -->
+            <div style="max-width: 1200px; margin: 40px auto 80px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); gap: 30px;">
+                    <!-- Imagem Painel Lateral -->
+                    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; text-align: center;">
+                        <h3 style="color: #ffd700; margin-bottom: 20px;">📱 Painel Lateral (250x700px)</h3>
+                        <img src="images/painel-lateral.png" alt="Painel Lateral com 23 Botões" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid rgba(255,215,0,0.3);">
+                        <p style="margin-top: 15px; color: #ccc;">21 botões organizados: Volumes, Execução, Gerenciamento, Ferramentas, Controles</p>
+                    </div>
+
+                    <!-- Imagem Painel Inferior -->
+                    <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; text-align: center;">
+                        <h3 style="color: #ffd700; margin-bottom: 20px;">📊 Painel Inferior (900x190px)</h3>
+                        <img src="images/painel-inferior.png" alt="Painel Inferior com 4 Colunas" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid rgba(255,215,0,0.3);">
+                        <p style="margin-top: 15px; color: #ccc;">4 colunas com 25+ métricas: Configuração, Status, Lucros, Posições</p>
+                    </div>
+                </div>
+
+                <!-- Imagem Completa no Gráfico (Opcional - Largura Total) -->
+                <div style="background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; text-align: center; margin-top: 30px;">
+                    <h3 style="color: #ffd700; margin-bottom: 20px;">🖥️ Interface Completa no MT5</h3>
+                    <img src="images/interface-completa.png" alt="Interface Completa NEXUS no MT5" style="max-width: 100%; height: auto; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 2px solid rgba(255,215,0,0.3);">
+                    <p style="margin-top: 15px; color: #ccc;">Visão completa: Painel Lateral + Painel Inferior + Gráfico com Trading Visual ativo</p>
+                </div>
+            </div>
+
             <div class="buttons-breakdown">
                 <!-- Categoria 1: Volumes -->
                 <div class="button-category">
                     <h3>📦 CATEGORIA 1: Volumes Rápidos (6 botões)</h3>
                     <div class="button-visual">
                         <span class="btn-demo small">0.01</span>
-                        <span class="btn-demo small">0.02</span>
                         <span class="btn-demo small">0.05</span>
+                        <span class="btn-demo small">0.10</span>
                         <span class="btn-demo small">0.50</span>
-                        <span class="btn-demo small">1.0</span>
-                        <span class="btn-demo small">100.0</span>
+                        <span class="btn-demo small">1.00</span>
+                        <span class="btn-demo small">5.00</span>
                     </div>
                     <p><strong>Como funciona:</strong> Altere o volume de negociação instantaneamente sem digitar. Um clique e todas as próximas ordens usarão esse volume automaticamente!</p>
                     <ul>
                         <li>✅ <strong>0.01</strong> - Micro lote para testes</li>
-                        <li>✅ <strong>0.02</strong> - Mini lote inicial</li>
                         <li>✅ <strong>0.05</strong> - Conservador operacional</li>
+                        <li>✅ <strong>0.10</strong> - Padrão recomendado</li>
                         <li>✅ <strong>0.50</strong> - Médio agressivo</li>
-                        <li>✅ <strong>1.0</strong> - Lote inteiro padrão</li>
-                        <li>✅ <strong>100.0</strong> - Alto volume profissional</li>
+                        <li>✅ <strong>1.00</strong> - Lote inteiro</li>
+                        <li>✅ <strong>5.00</strong> - Alto volume profissional</li>
                     </ul>
                 </div>
 
@@ -614,21 +425,21 @@
                 <div class="button-category">
                     <h3>⚡ CATEGORIA 2: Execução de Ordens (6 botões)</h3>
                     <div class="button-visual">
-                        <span class="btn-demo green">🟢 COMPRA MERCADO</span>
-                        <span class="btn-demo red">🔴 VENDA MERCADO</span>
+                        <span class="btn-demo green">🟢 BUY MKT</span>
+                        <span class="btn-demo red">🔴 SELL MKT</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo blue">🟦 COMPRA BID</span>
-                        <span class="btn-demo orange">🟥 VENDA ASK</span>
+                        <span class="btn-demo blue">🟦 BUY BID</span>
+                        <span class="btn-demo orange">🟥 SELL ASK</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo green">⬆️ COMPRA STOP</span>
-                        <span class="btn-demo red">⬇️ VENDA STOP</span>
+                        <span class="btn-demo green">⬆️ BUY STOP</span>
+                        <span class="btn-demo red">⬇️ SELL STOP</span>
                     </div>
                     <ul>
-                        <li>✅ <strong>COMPRA/VENDA MERCADO:</strong> Execução instantânea a mercado (ASK/BID)</li>
-                        <li>✅ <strong>COMPRA BID / VENDA ASK:</strong> Tenta ordem limitada no preço favorável, executa a mercado se não preencher</li>
-                        <li>✅ <strong>COMPRA/VENDA STOP:</strong> Ordens pendentes de rompimento com distância configurável</li>
+                        <li>✅ <strong>BUY/SELL MARKET:</strong> Execução instantânea a mercado (ASK/BID)</li>
+                        <li>✅ <strong>BUY BID / SELL ASK:</strong> Tenta LIMIT no preço favorável, fallback para MARKET se não executar</li>
+                        <li>✅ <strong>BUY/SELL STOP:</strong> Ordens pendentes de rompimento com distância configurável</li>
                     </ul>
                 </div>
 
@@ -636,20 +447,20 @@
                 <div class="button-category">
                     <h3>🎚️ CATEGORIA 3: Gerenciamento de Posições (5 botões)</h3>
                     <div class="button-visual">
-                        <span class="btn-demo wide orange">🔴 FECHAR TUDO</span>
+                        <span class="btn-demo wide orange">🔴 CLOSE ALL</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo green">❌ FECHAR COMPRAS</span>
-                        <span class="btn-demo red">❌ FECHAR VENDAS</span>
+                        <span class="btn-demo green">❌ CLOSE BUY</span>
+                        <span class="btn-demo red">❌ CLOSE SELL</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo green">🚫 CANCELAR COMPRAS</span>
-                        <span class="btn-demo red">🚫 CANCELAR VENDAS</span>
+                        <span class="btn-demo green">🚫 CANCEL BUY</span>
+                        <span class="btn-demo red">🚫 CANCEL SELL</span>
                     </div>
                     <ul>
-                        <li>✅ <strong>FECHAR TUDO:</strong> Botão de emergência - fecha TODAS as posições abertas instantaneamente (compras + vendas)</li>
-                        <li>✅ <strong>FECHAR COMPRAS/VENDAS:</strong> Fecha apenas compras ou apenas vendas, mantém outra direção aberta</li>
-                        <li>✅ <strong>CANCELAR COMPRAS/VENDAS:</strong> Cancela ordens pendentes por direção (Stop de Compra/Venda, Limitadas)</li>
+                        <li>✅ <strong>CLOSE ALL:</strong> Botão de emergência - fecha TODAS as posições abertas instantaneamente (compras + vendas)</li>
+                        <li>✅ <strong>CLOSE BUY/SELL:</strong> Fecha apenas compras ou apenas vendas, mantém outra direção aberta</li>
+                        <li>✅ <strong>CANCEL BUY/SELL:</strong> Cancela ordens pendentes por direção (Buy Stop, Buy Limit, Sell Stop, Sell Limit)</li>
                     </ul>
                 </div>
 
@@ -657,36 +468,78 @@
                 <div class="button-category">
                     <h3>🔧 CATEGORIA 4: Ferramentas Avançadas (2 botões)</h3>
                     <div class="button-visual">
-                        <span class="btn-demo purple">🔄 INVERTER</span>
-                        <span class="btn-demo purple">⚖️ PONTO ZERO</span>
+                        <span class="btn-demo purple">🔄 INVERT</span>
+                        <span class="btn-demo purple">⚖️ BREAK EVEN</span>
                     </div>
                     <ul>
-                        <li>✅ <strong>INVERTER:</strong> 
+                        <li>✅ <strong>INVERT:</strong> 
                             <ul style="margin-top: 10px;">
                                 <li><strong>HEDGE:</strong> Fecha todas as posições + abre no sentido oposto com mesmo volume total</li>
                                 <li><strong>NETTING:</strong> Fecha → aguarda 500ms → abre invertido sequencialmente</li>
                             </ul>
                         </li>
-                        <li>✅ <strong>PONTO ZERO:</strong> Move Stop Loss de TODAS as posições para preço de abertura manualmente (protege capital instantaneamente)</li>
+                        <li>✅ <strong>BREAK EVEN:</strong> Move Stop Loss de TODAS as posições para preço de abertura manualmente (protege capital instantaneamente)</li>
                     </ul>
                 </div>
 
-                <!-- Categoria 5: Controles -->
+                <!-- Categoria 5: Painel Informativo -->
                 <div class="button-category">
-                    <h3>⚙️ CATEGORIA 5: Controles de Interface (4 botões)</h3>
+                    <h3>📊 CATEGORIA 5: Painel Informativo Inferior (900x190px)</h3>
+                    <p><strong>🎯 Super Painel com 4 Colunas de Dados em Tempo Real:</strong></p>
+                    <ul>
+                        <li>✅ <strong>COLUNA 1 - Configuração Ativa:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>📦 Volume Atual | 🎯 Take Profit | 🛑 Stop Loss | 💰 Breakeven (pts)</li>
+                                <li>📈 Trailing Stop (pts) | 🔢 Magic Number | 📝 Comentário</li>
+                            </ul>
+                        </li>
+                        <li>✅ <strong>COLUNA 2 - Status do Sistema:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>🟢 AutoTrading Enabled (Verde=Ativo | Vermelho=Desligado)</li>
+                                <li>🤖 Modo: HEDGE ou NETTING (auto-detectado)</li>
+                                <li>📊 Spread Atual vs Máximo Permitido</li>
+                                <li>⏰ Horário do Servidor | 🌍 Timezone GMT</li>
+                                <li>🎨 Modo Visual: ✅ ON (Shift/Ctrl + Click habilitado)</li>
+                            </ul>
+                        </li>
+                        <li>✅ <strong>COLUNA 3 - Lucros e Performance:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>💵 Lucro Aberto (todas posições abertas)</li>
+                                <li>📅 Lucro Diário (hoje) | 📊 Lucro Semanal | 📈 Lucro Mensal</li>
+                                <li>🎯 Win Rate % (taxa de acerto)</li>
+                                <li>📉 Drawdown Atual (% e valor)</li>
+                                <li>⚠️ Limite Diário Lucro/Perda (barra de progresso)</li>
+                            </ul>
+                        </li>
+                        <li>✅ <strong>COLUNA 4 - Posições e Ordens:</strong>
+                            <ul style="margin-top: 10px;">
+                                <li>🔢 Total Posições Abertas (Buy/Sell separado)</li>
+                                <li>📦 Volume Total Aberto | 💰 Margem Utilizada</li>
+                                <li>📋 Ordens Pendentes (Buy Stop, Sell Stop, Limits)</li>
+                                <li>🕐 Tempo Médio em Posição</li>
+                                <li>🎯 Preço Médio Buy | Preço Médio Sell</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 20px; color: #ffd700;"><strong>⚡ Atualização:</strong> Refresh automático a cada 1 segundo | Cache otimizado 200ms | Cores dinâmicas (verde=lucro, vermelho=perda)</p>
+                </div>
+
+                <!-- Categoria 6: Controles -->
+                <div class="button-category">
+                    <h3>⚙️ CATEGORIA 6: Controles de Interface (4 botões)</h3>
                     <div class="button-visual">
-                        <span class="btn-demo wide teal">📊 PAINEL INFERIOR</span>
+                        <span class="btn-demo wide teal">📊 BOTTOM PANEL</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo wide lime">🖱️ MODO VISUAL: ✅</span>
+                        <span class="btn-demo wide lime">🖱️ VISUAL MODE: ✅</span>
                     </div>
                     <div class="button-visual">
-                        <span class="btn-demo wide blue">👁️ OCULTAR PAINEL (M)</span>
+                        <span class="btn-demo wide blue">👁️ HIDE PANEL (M)</span>
                     </div>
                     <ul>
-                        <li>✅ <strong>PAINEL INFERIOR:</strong> Exibe/oculta painel horizontal inferior (900x190px com 4 colunas: Configuração, Status, Lucros, Posições)</li>
-                        <li>✅ <strong>MODO VISUAL:</strong> Ativa/desativa trading com mouse - ✅ Verde = Ativo (Shift/Ctrl + Click) | ❌ Cinza = Desativado | Atalho: <strong>Q</strong></li>
-                        <li>✅ <strong>OCULTAR PAINEL:</strong> Minimiza painel lateral para botão pequeno, libera espaço no gráfico | Restaura com <strong>M</strong> ou clique</li>
+                        <li>✅ <strong>BOTTOM PANEL:</strong> Exibe/oculta painel horizontal inferior (900x190px com 4 colunas: Configuração, Status, Lucros, Posições)</li>
+                        <li>✅ <strong>VISUAL MODE:</strong> Ativa/desativa trading com mouse - ✅ Verde = Ativo (Shift/Ctrl + Click) | ❌ Cinza = Desativado | Hotkey: <strong>Q</strong></li>
+                        <li>✅ <strong>HIDE PANEL:</strong> Minimiza painel lateral para botão pequeno, libera espaço no gráfico | Restaura com <strong>M</strong> ou clique</li>
                     </ul>
                     <p><strong>🎹 Atalhos de Teclado:</strong> M = Minimizar/Maximizar Painel | Q = Ativar/Desativar Modo Visual</p>
                 </div>
@@ -695,14 +548,14 @@
                 <div class="button-category" style="border: 2px solid #ffc107;">
                     <h3>🔐 BÔNUS: Painel de Licença (2 botões quando expirada)</h3>
                     <div class="button-visual">
-                        <span class="btn-demo lime">📱 CONTATO</span>
-                        <span class="btn-demo orange">ENTENDIDO</span>
+                        <span class="btn-demo lime">📱 CONTACT</span>
+                        <span class="btn-demo orange">UNDERSTOOD</span>
                     </div>
                     <p><strong>Quando aparece:</strong> Apenas quando a licença está expirada ou próxima do vencimento</p>
                     <ul>
-                        <li>✅ <strong>📱 CONTATO:</strong> Link direto para WhatsApp/Telegram do suporte</li>
-                        <li>✅ <strong>ENTENDIDO:</strong> Fecha o aviso (robô permanece bloqueado até renovação)</li>
-                        <li>⚠️ <strong>Estados:</strong> ✅ Válida (sem painel) | ⚠️ 7 dias (aviso amarelo) | ❌ Expirada (painel vermelho + robô bloqueado)</li>
+                        <li>✅ <strong>📱 CONTACT:</strong> Link direto para WhatsApp/Telegram do suporte</li>
+                        <li>✅ <strong>UNDERSTOOD:</strong> Fecha o aviso (EA permanece bloqueado até renovação)</li>
+                        <li>⚠️ <strong>Estados:</strong> ✅ Válida (sem painel) | ⚠️ 7 dias (aviso amarelo) | ❌ Expirada (painel vermelho + EA bloqueado)</li>
                     </ul>
                 </div>
             </div>
@@ -797,6 +650,36 @@
                     <p>Petróleo, Gás Natural, Café</p>
                 </div>
             </div>
+
+            <div style="margin-top: 80px; padding: 50px; background: rgba(255,255,255,0.05); border-radius: 20px; backdrop-filter: blur(10px);">
+                <h3 style="text-align: center; color: #ffd700; font-size: 1.8em; margin-bottom: 40px;">🏛️ Corretoras Compatíveis</h3>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+                    <div style="text-align: left;">
+                        <h4 style="color: #4caf50; margin-bottom: 15px;"><i class="fas fa-flag"></i> 🇧🇷 Brasil</h4>
+                        <p style="line-height: 2; color: white;">XP Investimentos, Modal, Rico, Clear, Ativa, Índice, Toro, Inter, Genial</p>
+                    </div>
+                    
+                    <div style="text-align: left;">
+                        <h4 style="color: #2196f3; margin-bottom: 15px;"><i class="fas fa-globe"></i> Forex/Ouro/Índices</h4>
+                        <p style="line-height: 2; color: white;">TickMill, IC Markets, Pepperstone, FBS, XM, FXTM, Exness, Admiral Markets, Roboforex, Alpari, HotForex</p>
+                    </div>
+                    
+                    <div style="text-align: left;">
+                        <h4 style="color: #ff9800; margin-bottom: 15px;"><i class="fab fa-bitcoin"></i> Criptomoedas</h4>
+                        <p style="line-height: 2; color: white;">Binance, Bybit, OKX, Kraken, Bitget (via MT5)</p>
+                    </div>
+                    
+                    <div style="text-align: left;">
+                        <h4 style="color: #9c27b0; margin-bottom: 15px;"><i class="fas fa-chart-line"></i> Ações/ETFs</h4>
+                        <p style="line-height: 2; color: white;">Interactive Brokers, AvaTrade, Plus500, eToro (via MT5)</p>
+                    </div>
+                </div>
+                
+                <p style="text-align: center; margin-top: 30px; color: #ffd700; font-size: 1.1em;">
+                    ✅ <strong>Funciona em QUALQUER corretora que ofereça MetaTrader 5</strong> ✅
+                </p>
+            </div>
         </div>
     </section>
 
@@ -827,7 +710,7 @@
                         <li><i class="fas fa-check"></i> Suporte WhatsApp</li>
                         <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                     </ul>
-                    <a href="#contato" class="btn btn-outline">Começar Agora</a>
+                    <a href="https://pay.hotmart.com/SEU_LINK_MENSAL" target="_blank" class="btn btn-outline">Começar Agora</a>
                     <a href="#download" class="btn btn-outline" style="margin-top: 10px; background: transparent; border: 2px solid #ddd;"><i class="fas fa-download"></i> Ver Demo</a>
                 </div>
 
@@ -852,7 +735,7 @@
                         <li><i class="fas fa-star"></i> Grupo VIP Telegram</li>
                         <li><i class="fas fa-check"></i> Garantia 7 dias</li>
                     </ul>
-                    <a href="#contato" class="btn btn-primary">Quero Este!</a>
+                    <a href="https://pay.hotmart.com/SEU_LINK_TRIMESTRAL" target="_blank" class="btn btn-primary">Quero Este!</a>
                 </div>
 
                 <div class="pricing-card">
@@ -878,7 +761,7 @@
                         <li><i class="fas fa-star"></i> Grupo VIP Telegram</li>
                         <li><i class="fas fa-star"></i> Consultoria personalizada</li>
                     </ul>
-                    <a href="#contato" class="btn btn-outline">Adquirir Vitalício</a>
+                    <a href="https://pay.hotmart.com/SEU_LINK_VITALICIO" target="_blank" class="btn btn-outline">Adquirir Vitalício</a>
                 </div>
             </div>
 
@@ -940,18 +823,18 @@
                         </ul>
                     </div>
 
-                    <div style="margin-top: 30px; padding: 25px; background: rgba(220,53,69,0.1); border-left: 4px solid #dc3545; border-radius: 10px;">
-                        <h4 style="color: #ff6b6b; margin-bottom: 15px;"><i class="fas fa-exclamation-triangle"></i> Importante</h4>
+                    <div style="margin-top: 30px; padding: 25px; background: rgba(76,175,80,0.1); border-left: 4px solid #4caf50; border-radius: 10px;">
+                        <h4 style="color: #4caf50; margin-bottom: 15px;"><i class="fas fa-cog"></i> Estratégias Customizáveis</h4>
                         <p style="text-align: left; color: white; line-height: 1.8;">
-                            ⚠️ <strong>Os arquivos acima são demonstrativos.</strong> O download real será enviado por email após a confirmação do pagamento, junto com sua chave de licença personalizada.
+                            ✨ <strong>Adicione suas próprias estratégias!</strong> O NEXUS permite integração de novos indicadores customizados, padrões de candlestick personalizados e lógicas de entrada/saída customizadas.
                         </p>
                         <p style="text-align: left; color: white; line-height: 1.8; margin-top: 15px;">
-                            🔐 Cada licença é vinculada ao número da sua conta MT5 para garantir segurança.
+                            🛠️ <strong>150+ parâmetros editáveis</strong> organizados em 20 grupos para adaptar o robô ao seu estilo de trading. Sistema modular facilita expansão e otimização.
                         </p>
                     </div>
 
                     <div style="margin-top: 30px;">
-                        <a href="#contato" class="btn btn-primary btn-lg">
+                        <a href="https://pay.hotmart.com/SEU_LINK_TRIMESTRAL" target="_blank" class="btn btn-primary btn-lg">
                             <i class="fas fa-shopping-cart"></i> Adquirir Agora e Receber Download
                         </a>
                     </div>
@@ -1028,10 +911,10 @@
                 <h2>Pronto Para Trading 100% Automatizado?</h2>
                 <p>Junte-se a centenas de traders que já operam no piloto automático com o NEXUS TRADING PRO IA v4.71</p>
                 <div class="cta-buttons">
-                    <a href="#precos" class="btn btn-primary btn-lg">
-                        <i class="fas fa-rocket"></i> Começar Agora
+                    <a href="https://pay.hotmart.com/SEU_LINK_TRIMESTRAL" target="_blank" class="btn btn-primary btn-lg">
+                        <i class="fas fa-rocket"></i> Adquirir Agora
                     </a>
-                    <a href="https://wa.me/5511999999999" target="_blank" class="btn btn-secondary btn-lg">
+                    <a href="https://wa.me/5594981386880" target="_blank" class="btn btn-secondary btn-lg">
                         <i class="fab fa-whatsapp"></i> Falar no WhatsApp
                     </a>
                 </div>
@@ -1052,11 +935,11 @@
             </div>
 
             <div class="contact-grid">
-                <a href="https://wa.me/5511999999999" target="_blank" class="contact-card whatsapp">
+                <a href="https://wa.me/5594981386880" target="_blank" class="contact-card whatsapp">
                     <i class="fab fa-whatsapp"></i>
                     <h3>WhatsApp</h3>
                     <p>Resposta rápida</p>
-                    <span>+55 11 99999-9999</span>
+                    <span>+55 94 98138-6880</span>
                 </a>
 
                 <a href="https://t.me/seuusuario" target="_blank" class="contact-card telegram">
@@ -1127,15 +1010,9 @@
     </footer>
 
     <!-- BOTÃO FLUTUANTE WHATSAPP -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/5594981386880" target="_blank" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
     </a>
-
-    <!-- LIGHTBOX MODAL -->
-    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightbox-img" src="" alt="Imagem ampliada">
-    </div>
 
     <script src="script.js"></script>
 </body>
