@@ -360,11 +360,13 @@ img {
 .feature-card h3 {
     grid-area: header;
     margin: 0;
+    text-align: center;
 }
 
 .feature-card > p {
     grid-area: desc;
     margin: 0;
+    text-align: left;
 }
 
 .feature-card .feature-list {
