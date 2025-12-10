@@ -1102,14 +1102,31 @@ img {
         padding: 0 15px;
     }
     
+    .navbar .container {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .logo {
+        font-size: 1.2rem;
+        white-space: nowrap;
+    }
+    
+    .logo i {
+        font-size: 1.5rem;
+    }
+    
     .nav-links {
         flex-wrap: wrap;
-        gap: 8px !important;
+        gap: 6px !important;
+        width: 100%;
+        justify-content: center;
     }
     
     .nav-btn {
-        padding: 8px 12px;
-        font-size: 0.85em;
+        padding: 8px 10px;
+        font-size: 0.8em;
+        flex: 0 1 auto;
     }
     
     .feature-card {
@@ -1237,6 +1254,33 @@ img {
     h1 { font-size: 1.8rem; }
     h2 { font-size: 1.6rem; }
     h3 { font-size: 1.2rem; }
+    
+    /* NAVBAR MOBILE */
+    .navbar .container {
+        padding: 0 10px !important;
+    }
+    
+    .logo {
+        font-size: 1rem;
+        gap: 8px;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    
+    .logo i {
+        font-size: 1.3rem;
+    }
+    
+    .nav-links {
+        gap: 5px !important;
+        width: 100%;
+    }
+    
+    .nav-btn {
+        padding: 6px 8px;
+        font-size: 0.75em;
+        border-radius: 6px;
+    }
     
     /* CORRIGIR PADDING DO CONTAINER - APROVEITAR LARGURA TOTAL */
     .container {
