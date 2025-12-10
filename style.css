@@ -337,16 +337,41 @@ img {
 
 .feature-card {
     background: var(--white);
-    padding: 30px;
+    padding: 30px 35px;
     border-radius: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
     border: 2px solid transparent;
     display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 25px;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: 
+        "icon header features"
+        "icon desc features";
+    gap: 20px 30px;
     align-items: start;
+}
+
+.feature-card .feature-icon {
+    grid-area: icon;
+    align-self: center;
+}
+
+.feature-card h3 {
+    grid-area: header;
+    margin: 0;
+}
+
+.feature-card > p {
+    grid-area: desc;
+    margin: 0;
+}
+
+.feature-card .feature-list {
+    grid-area: features;
+    columns: 2;
+    column-gap: 25px;
+    margin: 0;
 }
 
 .feature-card:hover {
@@ -401,13 +426,16 @@ img {
 
 .feature-list {
     list-style: none;
+    padding: 0;
 }
 
 .feature-list li {
-    padding: 8px 0;
+    padding: 6px 0;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: flex-start;
+    gap: 8px;
+    break-inside: avoid;
+    page-break-inside: avoid;
 }
 
 .feature-list i {
@@ -1077,11 +1105,21 @@ img {
     
     .feature-card {
         grid-template-columns: 1fr;
+        grid-template-areas: 
+            "icon"
+            "header"
+            "desc"
+            "features";
         text-align: center;
+        gap: 15px;
     }
     
     .feature-icon {
-        margin: 0 auto 20px;
+        margin: 0 auto;
+    }
+    
+    .feature-card .feature-list {
+        columns: 1;
     }
     
     .hero-stats {
