@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS TRADING PRO IA - Guia Completo do Usuário</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .version {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .section-title {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            margin: 30px -20px 20px -20px;
+            font-size: 1.5em;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .section-title .emoji {
+            font-size: 1.3em;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin: 25px 0 15px 0;
+            font-size: 1.3em;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        .info-box {
+            background: #f0f4ff;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid #ffa500;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        .error-box {
+            background: #f8d7da;
+            border-left: 4px solid #dc3545;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 15px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .button-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .button-demo {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+        
+        .buy-button {
+            background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+        }
+        
+        .sell-button {
+            background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+        }
+        
+        .checklist {
+            list-style: none;
+            margin-left: 0;
+        }
+        
+        .checklist li {
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .checklist li:before {
+            content: '☐';
+            position: absolute;
+            left: 0;
+            font-size: 1.5em;
+            color: #667eea;
+        }
+        
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .tip-card {
+            background: white;
+            border: 2px solid #667eea;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .tip-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        .footer {
+            background: #2d3748;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer .contact {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+        
+        .toc {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .toc h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .toc ol {
+            list-style: none;
+            counter-reset: item;
+        }
+        
+        .toc li {
+            counter-increment: item;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        
+        .toc li:before {
+            content: counter(item) ". ";
+            color: #667eea;
+            font-weight: bold;
+            margin-right: 5px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .container {
+                box-shadow: none;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        .keyboard-key {
+            display: inline-block;
+            background: #f4f4f4;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-family: monospace;
+            font-weight: bold;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🤖 NEXUS TRADING PRO IA</h1>
+            <div class="version">v4.71 - Guia Completo do Usuário</div>
+            <p style="margin-top: 15px;">Manual Passo a Passo para Iniciantes</p>
+        </div>
+
+        <!-- BOTÕES NO TOPO -->
+        <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 30px; text-align: center;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; max-width: 900px; margin: 0 auto;">
+                <!-- Botão Download -->
+                <a href="files/NEXUS_DEMO_COMPLETO.zip" download style="display: block; background: linear-gradient(135deg, #32cd32, #228b22); color: white; padding: 20px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;">
+                    📥 BAIXAR DEMO GRÁTIS
+                </a>
+                
+                <!-- Botão Licença -->
+                <a href="https://ronaldocasttor.github.io/nexus-trading-pro/#contato" target="_blank" style="display: block; background: linear-gradient(135deg, #ffd700, #ffaa00); color: #333; padding: 20px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;">
+                    👑 ADQUIRIR LICENÇA FULL
+                </a>
+                
+                <!-- Botão WhatsApp -->
+                <a href="https://wa.me/5594981386880?text=Ol%C3%A1%2C%20gostaria%20de%20obter%20licen%C3%A7a%20para%20o%20rob%C3%B4%20Nexus%20Trading%20Pro" target="_blank" style="display: block; background: #25D366; color: white; padding: 20px; border-radius: 15px; text-decoration: none; font-weight: bold; font-size: 1.1em; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;">
+                    📱 WhatsApp
+                </a>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- ÍNDICE -->
+            <div class="toc">
+                <h2>📚 Índice</h2>
+                <ol>
+                    <li>O Que Você Precisa Antes de Começar</li>
+                    <li>Como Instalar o Robô no MT5</li>
+                    <li>Primeira Configuração (Iniciantes)</li>
+                    <li>Como Usar o Painel de Botões</li>
+                    <li>Configurações Avançadas</li>
+                    <li>Dicas para Ganhar Mais e Perder Menos</li>
+                    <li>Erros Comuns e Como Resolver</li>
+                    <li>Perguntas Frequentes</li>
+                    <li>Suporte e Contato</li>
+                </ol>
+            </div>
+
+            <!-- SEÇÃO 1 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">1️⃣</span>
+                    <span>O Que Você Precisa Antes de Começar</span>
+                </div>
+                
+                <h3>✅ Requisitos</h3>
+                <ul>
+                    <li>Computador ou VPS com Windows</li>
+                    <li>MetaTrader 5 instalado (baixe no site da sua corretora)</li>
+                    <li>Conta na corretora (pode ser demo para testar)</li>
+                    <li>Capital mínimo: USD 100-500 (recomendado)</li>
+                    <li>Internet estável</li>
+                    <li>Liberar O  NEXUS Após Contratar Licença se for Conta Real</li>
+                </ul>
+
+                <div class="warning-box">
+                    <h3>⚠️ IMPORTANTE ANTES DE COMEÇAR</h3>
+                    <ul>
+                        <li><strong>SEMPRE</strong> teste primeiro em conta DEMO (de mentirinha)</li>
+                        <li>Não opere com dinheiro que você precisa</li>
+                        <li>Comece com valores pequenos (0.01 lote)</li>
+                        <li>Deixe o robô operar por alguns dias antes de julgar</li>
+                        <li>Tenha paciência - trading não é loteria</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 2 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">2️⃣</span>
+                    <span>Como Instalar o Robô no MT5</span>
+                </div>
+                
+                <h3>📥 PASSO 1: Baixar o Arquivo</h3>
+                <div class="info-box">
+                    <p>Após comprar, você recebe por email:</p>
+                    <ul>
+                        <li><code>NEXUS_TRADING_PRO_IA_Português.ex5</code> (versão brasileira)</li>
+                        <li><code>NEXUS_TRADING_PRO_IA_English.ex5</code> (versão inglesa)</li>
+                    </ul>
+                    <p>Salve o arquivo no seu computador (Desktop, Downloads, etc)</p>
+                </div>
+
+                <h3>📂 PASSO 2: Colocar no MT5</h3>
+                <ol>
+                    <li>Abra o MetaTrader 5</li>
+                    <li>Clique em <strong>"Arquivo"</strong> no menu superior</li>
+                    <li>Clique em <strong>"Abrir pasta de dados"</strong></li>
+                    <li>Uma pasta vai abrir</li>
+                    <li>Entre na pasta <strong>"MQL5"</strong></li>
+                    <li>Entre na pasta <strong>"Experts"</strong></li>
+                    <li><strong>COLE</strong> o arquivo .ex5 aqui dentro</li>
+                    <li><strong>FECHE</strong> o MT5 completamente</li>
+                    <li><strong>ABRA</strong> o MT5 novamente</li>
+                </ol>
+
+                <h3>🔍 PASSO 3: Encontrar o Robô</h3>
+                <ol>
+                    <li>No MT5, procure a janela <strong>"Navegador"</strong> (lado esquerdo)</li>
+                    <li>Se não aparecer, aperte <span class="keyboard-key">Ctrl</span> + <span class="keyboard-key">N</span></li>
+                    <li>Clique em <strong>"Expert Advisors"</strong> (Consultor Especialista)</li>
+                    <li>Você vai ver: <strong>NEXUS TRADING PRO IA</strong></li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✅ PRONTO! Robô instalado.</strong>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 3 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">3️⃣</span>
+                    <span>Primeira Configuração (Iniciantes)</span>
+                </div>
+                
+                <h3>📊 PASSO 1: Escolher o Gráfico</h3>
+                <ol>
+                    <li>No MT5, escolha um ativo (ex: EURUSD, XAUUSD, WINFUT)</li>
+                    <li>Abra o gráfico dele (duplo clique)</li>
+                    <li>Escolha o tempo gráfico: <strong>H1 (1 hora)</strong> é bom para começar</li>
+                </ol>
+
+                <h3>🤖 PASSO 2: Colocar o Robô no Gráfico</h3>
+                <ol>
+                    <li>No Navegador, procure <strong>"NEXUS TRADING PRO IA"</strong></li>
+                    <li><strong>ARRASTE</strong> ele pro gráfico com o mouse</li>
+                    <li>Uma janela vai abrir com um monte de configurações</li>
+                </ol>
+
+                <h3>⚙️ PASSO 3: Configurar (PRIMEIRA VEZ - SIMPLES)</h3>
+                <div class="info-box">
+                    <p><strong>Para iniciantes, mude SÓ ESSAS CONFIGURAÇÕES:</strong></p>
+                </div>
+
+                <h3>═══ GRUPO: TRADING SETTINGS ═══</h3>
+                <ul>
+                    <li><code>Enable Trading</code>: <strong>true</strong> (deixa ligado)</li>
+                    <li><code>Trade Volume (Lot)</code>: <strong>0.01</strong> (COMECE PEQUENO!)</li>
+                    <li><code>Max Positions</code>: <strong>1</strong> (só 1 operação por vez)</li>
+                    <li><code>Magic Number</code>: <strong>12345</strong> (pode deixar)</li>
+                </ul>
+
+                <h3>═══ GRUPO: RISK MANAGEMENT ═══</h3>
+                <ul>
+                    <li><code>Use Auto SL</code>: <strong>true</strong> (stop automático - IMPORTANTE!)</li>
+                    <li><code>Stop Loss Points</code>: <strong>500</strong> (500 pontos de stop)</li>
+                    <li><code>Use Auto TP</code>: <strong>true</strong> (gain automático)</li>
+                    <li><code>Take Profit Points</code>: <strong>1000</strong> (1000 pontos de gain)</li>
+                </ul>
+
+                <h3>═══ GRUPO: TIME FILTERS ═══</h3>
+                <ul>
+                    <li><code>Enable Time Filter</code>: <strong>true</strong> (ativa filtro de horário)</li>
+                    <li><code>Start Hour</code>: <strong>9</strong> (começa 9h da manhã)</li>
+                    <li><code>End Hour</code>: <strong>17</strong> (termina 5h da tarde)</li>
+                    <li><code>Trade Monday</code>: <strong>true</strong></li>
+                    <li><code>Trade Tuesday</code>: <strong>true</strong></li>
+                    <li><code>Trade Wednesday</code>: <strong>true</strong></li>
+                    <li><code>Trade Thursday</code>: <strong>true</strong></li>
+                    <li><code>Trade Friday</code>: <strong>false</strong> (NÃO opera sexta - mais seguro)</li>
+                </ul>
+
+                <h3>═══ GRUPO: PROTECTIONS ═══</h3>
+                <ul>
+                    <li><code>Enable Breakeven</code>: <strong>true</strong> (move stop pro zero quando tá ganhando)</li>
+                    <li><code>Breakeven Trigger Points</code>: <strong>300</strong> (quando ganhar 300 pts, ativa)</li>
+                    <li><code>Daily Loss Limit</code>: <strong>500</strong> (se perder 500 USD no dia, para)</li>
+                    <li><code>Daily Profit Limit</code>: <strong>1000</strong> (se ganhar 1000 USD no dia, para)</li>
+                </ul>
+
+                <h3>═══ GRUPO: VISUAL PANEL ═══</h3>
+                <ul>
+                    <li><code>Show Side Panel</code>: <strong>true</strong> (mostra painel de botões)</li>
+                    <li><code>Show Info Panel</code>: <strong>true</strong> (mostra painel de informações)</li>
+                </ul>
+
+                <p style="margin-top: 20px;">Depois de configurar tudo, clique em <strong>"OK"</strong></p>
+
+                <h3>✅ PASSO 4: Verificar se Tá Funcionando</h3>
+                <div class="success-box">
+                    <p>No canto superior direito do gráfico, deve aparecer: <strong>😊</strong></p>
+                    <ul>
+                        <li>Se aparecer 😊 = <strong>TÁ FUNCIONANDO!</strong></li>
+                        <li>Se aparecer 😞 = Algo errado</li>
+                    </ul>
+                </div>
+
+                <div class="error-box">
+                    <p><strong>Se aparecer 😞, pode ser:</strong></p>
+                    <ul>
+                        <li>AutoTrading desligado (veja próximo passo)</li>
+                        <li>Licença inválida (entre em contato conosco)</li>
+                        <li>Mercado fechado (fim de semana)</li>
+                    </ul>
+                </div>
+
+                <h3>🟢 PASSO 5: Ligar o AUTOTRADING</h3>
+                <ol>
+                    <li>No MT5, clique no botão <strong>"AutoTrading"</strong> no topo</li>
+                    <li>Ele deve ficar <strong style="color: green;">VERDE</strong></li>
+                    <li>Se tiver vermelho, o robô NÃO vai operar</li>
+                </ol>
+            </div>
+
+            <!-- SEÇÃO 4 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">4️⃣</span>
+                    <span>Como Usar o Painel de Botões</span>
+                </div>
+                
+                <p>Você vai ver 2 painéis no gráfico:</p>
+                <ul>
+                    <li>📱 <strong>PAINEL LATERAL</strong> (Esquerda) - 21 BOTÕES</li>
+                    <li>📊 <strong>PAINEL INFERIOR</strong> (Embaixo) - INFORMAÇÕES</li>
+                </ul>
+
+                <h3>📦 LINHA 1: Escolher Tamanho (6 botões)</h3>
+                <div class="button-grid">
+                    <div class="button-demo">0.01</div>
+                    <div class="button-demo">0.05</div>
+                    <div class="button-demo">0.10</div>
+                    <div class="button-demo">0.50</div>
+                    <div class="button-demo">1.00</div>
+                    <div class="button-demo">100.00</div>
+                </div>
+                <div class="info-box">
+                    <p><strong>Como usar:</strong></p>
+                    <ul>
+                        <li>Clique no tamanho que quer operar</li>
+                        <li>Exemplo: Clica no <strong>[0.01]</strong> = todas próximas operações serão 0.01 lote</li>
+                        <li>Iniciante? Use sempre <strong>0.01 ou 0.05</strong></li>
+                    </ul>
+                </div>
+
+                <h3>⚡ LINHA 2 e 3: Comprar e Vender (6 botões)</h3>
+                <div class="button-grid">
+                    <div class="button-demo buy-button">BUY MKT</div>
+                    <div class="button-demo sell-button">SELL MKT</div>
+                    <div class="button-demo buy-button">BUY BID</div>
+                    <div class="button-demo sell-button">SELL ASK</div>
+                    <div class="button-demo buy-button">BUY STOP</div>
+                    <div class="button-demo sell-button">SELL STOP</div>
+                </div>
+                <div class="info-box">
+                    <p><strong>Como usar:</strong></p>
+                    <ul>
+                        <li><strong>BUY MKT</strong> e <strong>SELL MKT</strong> = Compra/Vende NA HORA</li>
+                        <li><strong>BUY BID</strong> e <strong>SELL ASK</strong> = Tenta pegar preço melhor</li>
+                        <li><strong>BUY STOP</strong> e <strong>SELL STOP</strong> = Ordem pendente (abre depois)</li>
+                    </ul>
+                    <p>💡 Para iniciantes: Use apenas <strong>BUY MKT</strong> e <strong>SELL MKT</strong></p>
+                </div>
+
+                <h3>🎚️ LINHA 4 e 5: Fechar Posições (5 botões)</h3>
+                <div class="button-grid">
+                    <div class="button-demo error-box" style="border: none; box-shadow: 0 4px 15px rgba(220,53,69,0.3);">CLOSE ALL</div>
+                    <div class="button-demo" style="background: #6c757d;">CLOSE BUY</div>
+                    <div class="button-demo" style="background: #6c757d;">CLOSE SELL</div>
+                    <div class="button-demo" style="background: #6c757d;">CANCEL BUY</div>
+                    <div class="button-demo" style="background: #6c757d;">CANCEL SELL</div>
+                </div>
+                <div class="info-box">
+                    <p><strong>Como usar:</strong></p>
+                    <ul>
+                        <li><strong>CLOSE ALL</strong> = Botão de pânico! Fecha TUDO na hora</li>
+                        <li><strong>CLOSE BUY / CLOSE SELL</strong> = Fecha só compras ou só vendas</li>
+                        <li><strong>CANCEL BUY / CANCEL SELL</strong> = Cancela ordens que não abriram</li>
+                    </ul>
+                </div>
+
+                <h3>🔧 LINHA 6: Ferramentas (2 botões)</h3>
+                <div class="button-grid">
+                    <div class="button-demo" style="background: #fd7e14;">INVERT</div>
+                    <div class="button-demo" style="background: #20c997;">BREAK EVEN</div>
+                </div>
+                <div class="info-box">
+                    <p><strong>Como usar:</strong></p>
+                    <ul>
+                        <li><strong>INVERT</strong>: Inverte tudo (fecha e abre no lado oposto)
+                            <br>→ Se você tá comprado e acha que vai cair, clica aqui</li>
+                        <li><strong>BREAK EVEN</strong>: Move todos stops pro zero
+                            <br>→ Clica e não perde mais nada</li>
+                    </ul>
+                </div>
+
+                <h3>📊 PAINEL INFERIOR - O Que Significa</h3>
+                <p>Esse painel mostra 4 COLUNAS de informações:</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>📋 COLUNA 1 - Configuração Atual</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Volume:</strong> quanto você tá operando</li>
+                            <li><strong>TP:</strong> seu gain</li>
+                            <li><strong>SL:</strong> seu stop</li>
+                            <li><strong>Breakeven:</strong> se tá ativo</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>🟢 COLUNA 2 - Status do Sistema</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>AutoTrading:</strong> Verde = ligado</li>
+                            <li><strong>Mode:</strong> HEDGE ou NETTING</li>
+                            <li><strong>Spread:</strong> custo atual</li>
+                            <li><strong>Server Time:</strong> hora do servidor</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>💵 COLUNA 3 - Seus Lucros</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Open Profit:</strong> ganhando/perdendo AGORA</li>
+                            <li><strong>Daily:</strong> ganhou HOJE</li>
+                            <li><strong>Weekly:</strong> ganhou essa SEMANA</li>
+                            <li><strong>Monthly:</strong> ganhou esse MÊS</li>
+                            <li><strong>Win Rate:</strong> taxa de acerto</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>🔢 COLUNA 4 - Posições</h4>
+                        <ul style="margin-left: 20px; margin-top: 10px;">
+                            <li><strong>Total Positions:</strong> operações abertas</li>
+                            <li><strong>Buy/Sell:</strong> quantas compras/vendas</li>
+                            <li><strong>Volume:</strong> volume total aberto</li>
+                            <li><strong>Pending:</strong> ordens pendentes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>⌨️ Atalhos do Teclado</h3>
+                <div class="info-box">
+                    <ul>
+                        <li><span class="keyboard-key">M</span> = Esconde/mostra o painel lateral</li>
+                        <li><span class="keyboard-key">Q</span> = Liga/desliga modo visual</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>MODO VISUAL (quando ligado):</strong></p>
+                    <ul>
+                        <li><span class="keyboard-key">Shift</span> + Clique no gráfico = COMPRA naquele preço</li>
+                        <li><span class="keyboard-key">Ctrl</span> + Clique no gráfico = VENDE naquele preço</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 5 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">5️⃣</span>
+                    <span>Configurações Avançadas</span>
+                </div>
+                
+                <div class="warning-box">
+                    <p><strong>⚠️ Esta seção é para usuários experientes!</strong></p>
+                    <p>Se você é iniciante, não mexa nessas configurações ainda.</p>
+                </div>
+
+                <h3>📊 Indicadores Técnicos</h3>
+                <ul>
+                    <li><code>Enable Stochastic</code>: true/false (usa indicador Stochastic)</li>
+                    <li><code>Enable RSI</code>: true/false (usa indicador RSI)</li>
+                    <li><code>Enable MA</code>: true/false (usa Médias Móveis)</li>
+                    <li><code>Enable Price Action</code>: true/false (usa padrões de candles)</li>
+                </ul>
+                <p><strong>💡 Dica:</strong> Comece com TODOS ligados (true)</p>
+
+                <h3>💰 Gerenciamento de Risco</h3>
+                <ul>
+                    <li><code>Risk Type</code>: FIXED / RISK_PERCENT / ATR_BASED
+                        <ul>
+                            <li><strong>FIXED:</strong> sempre o mesmo lote</li>
+                            <li><strong>RISK_PERCENT:</strong> calcula pelo risco %</li>
+                            <li><strong>ATR_BASED:</strong> baseado na volatilidade</li>
+                        </ul>
+                    </li>
+                    <li><code>Risk Percent</code>: 1.0 (arrisco 1% da conta por trade)</li>
+                    <li><code>Max Daily Trades</code>: 5 (máximo 5 trades por dia)</li>
+                    <li><code>Max Open Positions</code>: 3 (máximo 3 posições abertas)</li>
+                </ul>
+
+                <h3>📈 Trailing Stop (Stop Móvel)</h3>
+                <ul>
+                    <li><code>Enable Trailing</code>: true (ativa trailing stop)</li>
+                    <li><code>Trailing Start</code>: 500 (começa quando ganhar 500 pts)</li>
+                    <li><code>Trailing Step</code>: 50 (desloca de 50 em 50 pts)</li>
+                </ul>
+                <div class="info-box">
+                    <p><strong>Como funciona:</strong></p>
+                    <p>Quando o trade tá ganhando 500 pontos, o stop começa a subir junto com o preço. Se o preço cair 50 pontos, fecha no lucro.</p>
+                </div>
+
+                <h3>🎯 Breakeven Automático</h3>
+                <ul>
+                    <li><code>Enable Breakeven</code>: true</li>
+                    <li><code>Breakeven Mode</code>: SIMPLE / PROFIT_LOCK / AGGRESSIVE
+                        <ul>
+                            <li><strong>SIMPLE:</strong> move pro zero exato</li>
+                            <li><strong>PROFIT_LOCK:</strong> move pro zero + alguns pontos</li>
+                            <li><strong>AGGRESSIVE:</strong> move mais rápido</li>
+                        </ul>
+                    </li>
+                    <li><code>Breakeven Trigger</code>: 300 (ativa quando ganhar 300 pts)</li>
+                    <li><code>Breakeven Profit</code>: 50 (deixa 50 pts de lucro travado)</li>
+                </ul>
+
+                <h3>🕐 Filtros de Horário</h3>
+                <ul>
+                    <li><strong>Trading Sessions:</strong>
+                        <ul>
+                            <li>Asian Session: 00:00 - 09:00 (horário de Brasília)</li>
+                            <li>London Session: 09:00 - 18:00</li>
+                            <li>NY Session: 13:00 - 22:00</li>
+                        </ul>
+                    </li>
+                    <li><code>Enable News Filter</code>: true
+                        <ul>
+                            <li><code>Minutes Before News</code>: 30 (para 30 min antes)</li>
+                            <li><code>Minutes After News</code>: 30 (para 30 min depois)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>📊 Análise Multi-Timeframe</h3>
+                <ul>
+                    <li><code>Enable MTF</code>: true (usa tempos maiores para confirmar)</li>
+                    <li><code>MTF Timeframe</code>: H4 (usa gráfico de 4 horas)</li>
+                    <li><code>MTF Filter</code>: MA / TREND / BOTH
+                        <ul>
+                            <li><strong>MA:</strong> usa média móvel do tempo maior</li>
+                            <li><strong>TREND:</strong> usa direção da tendência</li>
+                            <li><strong>BOTH:</strong> usa os dois</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- SEÇÃO 6 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">6️⃣</span>
+                    <span>Dicas para Ganhar Mais e Perder Menos</span>
+                </div>
+                
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <h4>1. COMECE PEQUENO</h4>
+                        <p>• Use 0.01 lote no início<br>
+                        • Vá aumentando conforme ganha experiência<br>
+                        • Nunca arrisque mais de 2% da conta por trade</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>2. TESTE EM DEMO PRIMEIRO</h4>
+                        <p>• Mínimo 2 semanas em conta demo<br>
+                        • Só vá pro real depois de entender TUDO<br>
+                        • Demo é de graça, aproveite!</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>3. NÃO OPERE SEXTA-FEIRA</h4>
+                        <p>• Fim de semana pode ter gap<br>
+                        • Configure: Trade Friday: false<br>
+                        • Mais seguro: segunda a quinta</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>4. USE PROTEÇÕES</h4>
+                        <p>• SEMPRE use Stop Loss<br>
+                        • SEMPRE ative Breakeven<br>
+                        • Configure limite de perda diária</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>5. ESCOLHA BEM O HORÁRIO</h4>
+                        <p>• Melhor: 9h às 17h (Brasília)<br>
+                        • Evite madrugada<br>
+                        • Evite antes/depois de notícias</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>6. NÃO MEXA NO ROBÔ</h4>
+                        <p>• Se configurou direito, deixa trabalhar<br>
+                        • Não mexa manualmente<br>
+                        • Dê tempo (mínimo 1 semana)</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>7. ACOMPANHE RESULTADOS</h4>
+                        <p>• Olhe o Win Rate no painel<br>
+                        • Se abaixo de 50%, algo tá errado<br>
+                        • Ajuste aos poucos</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>8. USE TRAILING STOP</h4>
+                        <p>• Protege lucros conquistados<br>
+                        • Trailing Start: 500<br>
+                        • Trailing Step: 50</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>9. DIVERSIFIQUE</h4>
+                        <p>• Não opere só 1 ativo<br>
+                        • Use em EURUSD, XAUUSD, etc<br>
+                        • Mas comece com 1 ou 2</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <h4>10. TENHA PACIÊNCIA</h4>
+                        <p>• Trading não é enriquecimento rápido<br>
+                        • Meta realista: 5-10% ao mês<br>
+                        • Desconfie de promessas milagrosas</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 7 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">7️⃣</span>
+                    <span>Erros Comuns e Como Resolver</span>
+                </div>
+                
+                <div class="error-box">
+                    <h4>❌ ERRO: Aparece 😞 no gráfico</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>Verifique se o botão AutoTrading tá VERDE</li>
+                        <li>Clique nele para ligar</li>
+                        <li>Se continuar, tire o robô e coloque de novo</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Robô não abre operações</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>Verifique se <code>Enable Trading: true</code></li>
+                        <li>Verifique se o horário tá certo (Start Hour / End Hour)</li>
+                        <li>Verifique se o dia da semana tá habilitado</li>
+                        <li>Mercado pode estar fechado (fim de semana)</li>
+                        <li>Veja se o spread não tá muito alto</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Painel não aparece</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>Nas configurações, verifique:
+                            <ul>
+                                <li><code>Show Side Panel: true</code></li>
+                                <li><code>Show Info Panel: true</code></li>
+                            </ul>
+                        </li>
+                        <li>Aperte a tecla <span class="keyboard-key">M</span></li>
+                        <li>Tire o robô e coloque de novo</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: "Trade is disabled"</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>No MT5, vá em: <strong>Ferramentas → Opções</strong></li>
+                        <li>Aba <strong>"Expert Advisors"</strong></li>
+                        <li>Marque: <strong>"Permitir trading automatizado"</strong></li>
+                        <li>Marque: <strong>"Permitir importação de DLLs"</strong></li>
+                        <li>Clique <strong>OK</strong></li>
+                        <li>Reinicie o MT5</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Robô abre muitas operações</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>Configure: <code>Max Positions: 1</code> (ou 2, 3)</li>
+                        <li>Configure: <code>Max Daily Trades: 5</code></li>
+                        <li>Isso limita quantas operações ele abre</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Stop Loss não fecha no lugar certo</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li>Configure: <code>Stop Loss Points: 500</code></li>
+                        <li>Valores muito pequenos podem dar erro</li>
+                        <li>Mínimo recomendado: 300 pontos</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Robô perdendo muito</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <ol>
+                        <li><strong>PARE!</strong> Volte pra demo</li>
+                        <li>Revise as configurações</li>
+                        <li>Diminua o risco (<code>Volume: 0.01</code>)</li>
+                        <li>Ative todas as proteções</li>
+                        <li>Configure <code>Daily Loss Limit: 500</code></li>
+                        <li>Pode ser que o mercado não tá bom pro robô agora</li>
+                    </ol>
+                </div>
+
+                <div class="error-box">
+                    <h4>❌ ERRO: Licença expirada</h4>
+                    <p><strong>✅ SOLUÇÃO:</strong></p>
+                    <p>Entre em contato conosco para renovar:<br>
+                    WhatsApp / Telegram / Email (veja seção de suporte)</p>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 8 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">8️⃣</span>
+                    <span>Perguntas Frequentes</span>
+                </div>
+                
+                <div class="info-box">
+                    <h4>❓ O robô funciona em qualquer corretora?</h4>
+                    <p>Sim! Funciona em TODAS as corretoras MT5 do mundo:</p>
+                    <ul>
+                        <li><strong>Brasileiras:</strong> XP, Modal, Rico, Clear, Ativa, Índice</li>
+                        <li><strong>Internacionais:</strong> TickMill, IC Markets, Pepperstone, XM, etc</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Funciona em conta demo?</h4>
+                    <p>Sim! E você DEVE testar em demo primeiro antes de ir pro real.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Quanto dinheiro preciso para começar?</h4>
+                    <ul>
+                        <li>Mínimo: USD 100</li>
+                        <li>Recomendado: USD 500</li>
+                        <li>Ideal: USD 1000+</li>
+                    </ul>
+                    <p>Quanto mais capital, mais seguro fica.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Qual o lucro esperado?</h4>
+                    <ul>
+                        <li>Realista: 5-10% ao mês</li>
+                        <li>Possível: 15-20% ao mês (com mais risco)</li>
+                        <li>Impossível: 100% ao mês (fuja de quem promete isso)</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Preciso deixar o computador ligado?</h4>
+                    <p>Sim! Ou use um VPS (servidor na nuvem).<br>
+                    Se desligar o PC, o robô para de operar.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ O que é VPS?</h4>
+                    <p>É um computador na nuvem que fica ligado 24h.<br>
+                    Recomendamos se você quiser operar 24h sem parar.<br>
+                    Custa cerca de USD 10-20 por mês.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Posso usar em vários gráficos ao mesmo tempo?</h4>
+                    <p>Sim! Pode colocar em EURUSD, XAUUSD, Mini Dólar, etc.<br>
+                    Mas use Magic Numbers diferentes em cada um.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ O que é Magic Number?</h4>
+                    <p>É um número que identifica as operações do robô.<br>
+                    Se usar em 2 gráficos, use números diferentes:</p>
+                    <ul>
+                        <li>Gráfico 1: <code>Magic Number: 12345</code></li>
+                        <li>Gráfico 2: <code>Magic Number: 54321</code></li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Posso operar manualmente junto com o robô?</h4>
+                    <p>Pode! Use os botões do painel.<br>
+                    Mas não mexa nas operações que o robô abriu.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ O robô usa Martingale?</h4>
+                    <p>NÃO por padrão. Mas você pode ativar se quiser.<br>
+                    Não recomendamos para iniciantes.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Funciona em qual tempo gráfico?</h4>
+                    <p>Qualquer tempo! Mas recomendamos:</p>
+                    <ul>
+                        <li><strong>M15 ou M30:</strong> para day trade</li>
+                        <li><strong>H1 ou H4:</strong> para swing trade</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Preciso entender de trading para usar?</h4>
+                    <p>Não precisa ser expert, mas precisa saber o básico:</p>
+                    <ul>
+                        <li>O que é Stop Loss e Take Profit</li>
+                        <li>Diferença entre compra e venda</li>
+                        <li>Gerenciamento de risco</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Quantas operações o robô abre por dia?</h4>
+                    <p>Depende da configuração. Padrão: 3-5 por dia.<br>
+                    Você controla isso em: <code>Max Daily Trades</code></p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ O robô opera final de semana?</h4>
+                    <p>Não. O mercado Forex fecha no final de semana.<br>
+                    Reabre domingo à noite / segunda de manhã.</p>
+                </div>
+
+                <div class="info-box">
+                    <h4>❓ Tenho que ficar olhando o tempo todo?</h4>
+                    <p>Não! É automático. Mas é bom dar uma olhada 1-2 vezes por dia.</p>
+                </div>
+            </div>
+
+            <!-- SEÇÃO 9 -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">9️⃣</span>
+                    <span>Suporte e Contato</span>
+                </div>
+                
+                <div class="success-box">
+                    <h3>📞 PRECISA DE AJUDA? FALE COM A GENTE:</h3>
+                    <p style="margin-top: 15px; font-size: 1.1em;">
+                        <strong>WhatsApp:</strong> [SEU NÚMERO]<br>
+                        <strong>Telegram:</strong> [SEU USUÁRIO]<br>
+                        <strong>Email:</strong> [SEU EMAIL]
+                    </p>
+                </div>
+
+                <div class="info-box">
+                    <h3>⏰ HORÁRIO DE ATENDIMENTO:</h3>
+                    <p>Segunda a Sexta: 9h às 18h (horário de Brasília)<br>
+                    Resposta em até 2 horas no horário comercial</p>
+                </div>
+
+                <div class="info-box">
+                    <h3>🎁 GRUPO VIP:</h3>
+                    <p>Após comprar, você entra no grupo VIP do Telegram com:</p>
+                    <ul>
+                        <li>Outros usuários do NEXUS</li>
+                        <li>Dicas e configurações</li>
+                        <li>Atualizações e novidades</li>
+                    </ul>
+                </div>
+
+                <div class="info-box">
+                    <h3>📚 MATERIAIS EXTRAS:</h3>
+                    <ul>
+                        <li>✅ Vídeo tutoriais (em breve)</li>
+                        <li>✅ Exemplos de configuração (.set files)</li>
+                        <li>✅ Atualizações gratuitas por 1 ano</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CHECKLIST FINAL -->
+            <div class="section">
+                <div class="section-title">
+                    <span class="emoji">🎯</span>
+                    <span>Checklist Final - Antes de Começar</span>
+                </div>
+                
+                <div class="warning-box">
+                    <h3>Antes de operar, confira se fez TUDO:</h3>
+                    <ul class="checklist">
+                        <li>Instalei o NEXUS no MT5</li>
+                        <li>Testei em conta DEMO primeiro</li>
+                        <li>Configurei com valores pequenos (0.01 lote)</li>
+                        <li>Ativei o AutoTrading (botão verde)</li>
+                        <li>Configurei Stop Loss e Take Profit</li>
+                        <li>Ativei Breakeven automático</li>
+                        <li>Configurei limite de perda diária</li>
+                        <li>Escolhi horário de operação (9h-17h)</li>
+                        <li>Desabilitei sexta-feira</li>
+                        <li>Li o manual completo</li>
+                        <li>Entendi como usar os botões</li>
+                        <li>Salvei os contatos de suporte</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MENSAGEM FINAL -->
+            <div class="section">
+                <div class="success-box" style="text-align: center; font-size: 1.1em;">
+                    <h2>✨ MENSAGEM FINAL</h2>
+                    <p style="margin: 20px 0;"><strong>Parabéns por adquirir o NEXUS TRADING PRO IA!</strong></p>
+                    <p>Você tem agora uma das ferramentas mais completas do mercado.<br>
+                    Mas lembre-se: o robô é uma FERRAMENTA, não uma máquina de dinheiro.</p>
+                    
+                    <p style="margin: 20px 0;"><strong>Você precisa:</strong></p>
+                    <p>✅ Configurar corretamente<br>
+                    ✅ Usar gerenciamento de risco<br>
+                    ✅ Ter paciência<br>
+                    ✅ Entender que perdas fazem parte</p>
+                    
+                    <p style="margin: 20px 0;">Siga este manual, teste bastante em demo, e vá com calma.</p>
+                    
+                    <p style="font-size: 1.2em; margin-top: 20px;"><strong>Trading é uma maratona, não uma corrida de 100 metros.</strong></p>
+                    
+                    <p style="margin-top: 30px; font-size: 1.3em;">Qualquer dúvida, estamos aqui para ajudar! 🚀</p>
+                </div>
+            </div>
+
+            <!-- BOTÕES DE AÇÃO -->
+            <div class="section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px; border-radius: 15px; margin: 40px 0;">
+                <h2 style="color: white; text-align: center; margin-bottom: 30px;">📦 Downloads e Contato</h2>
+                
+                <!-- Botão Download -->
+                <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 15px; margin-bottom: 25px; text-align: center;">
+                    <h3 style="color: white; margin-bottom: 15px; border: none; padding: 0;"><i style="font-size: 2em;">🎁</i> Versão Demo Completa</h3>
+                    <p style="color: #ffd700; font-size: 1.1em; margin: 10px 0;">✅ Português + English</p>
+                    <p style="color: #ffd700; font-size: 1.1em; margin: 10px 0;">✅ Manual Completo Incluído</p>
+                    <a href="files/NEXUS_DEMO_COMPLETO.zip" download style="display: inline-block; background: linear-gradient(135deg, #32cd32, #228b22); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2em; margin-top: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;">
+                        📥 BAIXAR VERSÃO DEMO GRÁTIS
+                    </a>
+                </div>
+
+                <!-- Botão Licença Full -->
+                <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 15px; margin-bottom: 25px; text-align: center;">
+                    <h3 style="color: white; margin-bottom: 15px; border: none; padding: 0;"><i style="font-size: 2em;">👑</i> Versão Completa</h3>
+                    <p style="color: white; margin-bottom: 20px; line-height: 1.8;">Adquira a licença full e opere em conta real com suporte vitalício!</p>
+                    <a href="https://ronaldocasttor.github.io/nexus-trading-pro/#contato" target="_blank" style="display: inline-block; background: linear-gradient(135deg, #ffd700, #ffaa00); color: #333; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.2em; box-shadow: 0 4px 15px rgba(0,0,0,0.3); transition: all 0.3s;">
+                        🛒 Adquirir Licença Full Agora
+                    </a>
+                </div>
+
+                <!-- Botões de Contato -->
+                <div style="background: rgba(255,255,255,0.15); padding: 30px; border-radius: 15px;">
+                    <h3 style="color: white; text-align: center; margin-bottom: 25px; border: none; padding: 0;">📞 Entre em Contato</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
+                        <a href="https://wa.me/5594981386880?text=Ol%C3%A1%2C%20gostaria%20de%20obter%20licen%C3%A7a%20para%20o%20rob%C3%B4%20Nexus%20Trading%20Pro" target="_blank" style="display: block; background: #25D366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+                            📱 WhatsApp
+                        </a>
+                        <a href="https://t.me/RonaldoCasttor" target="_blank" style="display: block; background: #0088cc; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+                            ✈️ Telegram
+                        </a>
+                        <a href="mailto:ronaldocasttor@gmail.com" style="display: block; background: #EA4335; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: all 0.3s;">
+                            📧 Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h2>NEXUS TRADING PRO IA v4.71</h2>
+            <p style="margin-top: 10px;">© 2024-2025 - Todos os direitos reservados</p>
+            <div class="contact" style="margin-top: 20px;">
+                <p>WhatsApp: +55 94 98138-6880</p>
+                <p>Telegram: @RonaldoCasttor</p>
+                <p>Email: ronaldocasttor@gmail.com</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

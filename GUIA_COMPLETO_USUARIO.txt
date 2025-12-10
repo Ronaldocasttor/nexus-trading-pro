@@ -1,0 +1,614 @@
+═══════════════════════════════════════════════════════════════════
+🤖 NEXUS TRADING PRO IA v4.71 - GUIA COMPLETO DO USUÁRIO
+═══════════════════════════════════════════════════════════════════
+
+📖 MANUAL PASSO A PASSO PARA INICIANTES
+
+Este guia vai te ensinar TUDO sobre o NEXUS Trading Pro IA, desde a instalação
+até o uso avançado. Leia com calma e siga cada passo.
+
+═══════════════════════════════════════════════════════════════════
+📚 ÍNDICE
+═══════════════════════════════════════════════════════════════════
+
+1. O QUE VOCÊ PRECISA ANTES DE COMEÇAR
+2. COMO INSTALAR O ROBÔ NO MT5
+3. PRIMEIRA CONFIGURAÇÃO (INICIANTES)
+4. COMO USAR O PAINEL DE BOTÕES
+5. CONFIGURAÇÕES AVANÇADAS
+6. DICAS PARA GANHAR MAIS E PERDER MENOS
+7. ERROS COMUNS E COMO RESOLVER
+8. PERGUNTAS FREQUENTES
+9. SUPORTE E CONTATO
+
+═══════════════════════════════════════════════════════════════════
+1️⃣ O QUE VOCÊ PRECISA ANTES DE COMEÇAR
+═══════════════════════════════════════════════════════════════════
+
+✅ REQUISITOS:
+
+• Computador ou VPS com Windows
+• MetaTrader 5 instalado (baixe no site da sua corretora)
+• Conta na corretora (pode ser demo para testar)
+• Capital mínimo: USD 100-500 (recomendado)
+• Internet estável
+• Licença do NEXUS (recebida após compra)
+
+⚠️ IMPORTANTE ANTES DE COMEÇAR:
+
+• SEMPRE teste primeiro em conta DEMO (de mentirinha)
+• Não opere com dinheiro que você precisa
+• Comece com valores pequenos (0.01 lote)
+• Deixe o robô operar por alguns dias antes de julgar
+• Tenha paciência - trading não é loteria
+
+═══════════════════════════════════════════════════════════════════
+2️⃣ COMO INSTALAR O ROBÔ NO MT5
+═══════════════════════════════════════════════════════════════════
+
+📥 PASSO 1: BAIXAR O ARQUIVO
+
+1. Após comprar, você recebe por email:
+   - NEXUS_TRADING_PRO_IA_Português.ex5 (versão brasileira)
+   - NEXUS_TRADING_PRO_IA_English.ex5 (versão inglesa)
+
+2. Salve o arquivo no seu computador (Desktop, Downloads, etc)
+
+📂 PASSO 2: COLOCAR NO MT5
+
+1. Abra o MetaTrader 5
+2. Clique em "Arquivo" no menu superior
+3. Clique em "Abrir pasta de dados"
+4. Uma pasta vai abrir
+5. Entre na pasta "MQL5"
+6. Entre na pasta "Experts"
+7. COLE o arquivo .ex5 aqui dentro
+8. FECHE o MT5 completamente
+9. ABRA o MT5 novamente
+
+🔍 PASSO 3: ENCONTRAR O ROBÔ
+
+1. No MT5, procure a janela "Navegador" (lado esquerdo)
+2. Se não aparecer, aperte Ctrl + N
+3. Clique em "Expert Advisors" (Consultor Especialista)
+4. Você vai ver: NEXUS TRADING PRO IA
+
+✅ PRONTO! Robô instalado.
+
+═══════════════════════════════════════════════════════════════════
+3️⃣ PRIMEIRA CONFIGURAÇÃO (INICIANTES)
+═══════════════════════════════════════════════════════════════════
+
+🎯 CONFIGURAÇÃO BÁSICA PARA COMEÇAR:
+
+📊 PASSO 1: ESCOLHER O GRÁFICO
+
+1. No MT5, escolha um ativo (ex: EURUSD, XAUUSD, WINFUT)
+2. Abra o gráfico dele (duplo clique)
+3. Escolha o tempo gráfico: H1 (1 hora) é bom para começar
+
+🤖 PASSO 2: COLOCAR O ROBÔ NO GRÁFICO
+
+1. No Navegador, procure "NEXUS TRADING PRO IA"
+2. ARRASTE ele pro gráfico com o mouse
+3. Uma janela vai abrir com um monte de configurações
+
+⚙️ PASSO 3: CONFIGURAR (PRIMEIRA VEZ - SIMPLES)
+
+Para iniciantes, mude SÓ ESSAS CONFIGURAÇÕES:
+
+═══ GRUPO: TRADING SETTINGS ═══
+
+• Enable Trading: true (deixa ligado)
+• Trade Volume (Lot): 0.01 (COMECE PEQUENO!)
+• Max Positions: 1 (só 1 operação por vez)
+• Magic Number: 12345 (pode deixar)
+
+═══ GRUPO: RISK MANAGEMENT ═══
+
+• Use Auto SL: true (stop automático - IMPORTANTE!)
+• Stop Loss Points: 500 (500 pontos de stop)
+• Use Auto TP: true (gain automático)
+• Take Profit Points: 1000 (1000 pontos de gain)
+
+═══ GRUPO: TIME FILTERS ═══
+
+• Enable Time Filter: true (ativa filtro de horário)
+• Start Hour: 9 (começa 9h da manhã)
+• End Hour: 17 (termina 5h da tarde)
+• Trade Monday: true
+• Trade Tuesday: true
+• Trade Wednesday: true
+• Trade Thursday: true
+• Trade Friday: false (NÃO opera sexta - mais seguro)
+
+═══ GRUPO: PROTECTIONS ═══
+
+• Enable Breakeven: true (move stop pro zero quando tá ganhando)
+• Breakeven Trigger Points: 300 (quando ganhar 300 pts, ativa)
+• Daily Loss Limit: 500 (se perder 500 USD no dia, para)
+• Daily Profit Limit: 1000 (se ganhar 1000 USD no dia, para)
+
+═══ GRUPO: VISUAL PANEL ═══
+
+• Show Side Panel: true (mostra painel de botões)
+• Show Info Panel: true (mostra painel de informações)
+
+4. Depois de configurar tudo, clique em "OK"
+
+✅ PASSO 4: VERIFICAR SE TÁ FUNCIONANDO
+
+1. No canto superior direito do gráfico, deve aparecer: 😊
+   - Se aparecer 😊 = TÁ FUNCIONANDO!
+   - Se aparecer 😞 = Algo errado
+
+2. Se aparecer 😞, pode ser:
+   - AutoTrading desligado (veja próximo passo)
+   - Licença inválida (entre em contato conosco)
+   - Mercado fechado (fim de semana)
+
+🟢 PASSO 5: LIGAR O AUTOTRADING
+
+1. No MT5, clique no botão "AutoTrading" no topo
+2. Ele deve ficar VERDE
+3. Se tiver vermelho, o robô NÃO vai operar
+
+═══════════════════════════════════════════════════════════════════
+4️⃣ COMO USAR O PAINEL DE BOTÕES
+═══════════════════════════════════════════════════════════════════
+
+Você vai ver 2 painéis no gráfico:
+
+📱 PAINEL LATERAL (Esquerda) - 21 BOTÕES
+📊 PAINEL INFERIOR (Embaixo) - INFORMAÇÕES
+
+═══ PAINEL LATERAL - COMO USAR ═══
+
+📦 LINHA 1: ESCOLHER TAMANHO (6 BOTÕES)
+
+Botões: [ 0.01 ] [ 0.05 ] [ 0.10 ] [ 0.50 ] [ 1.00 ] [ 100.00 ]
+
+Como usar:
+• Clique no tamanho que quer operar
+• Exemplo: Clica no [0.01] = todas próximas operações serão 0.01 lote
+• Iniciante? Use sempre 0.01 ou 0.05
+
+⚡ LINHA 2 e 3: COMPRAR E VENDER (6 BOTÕES)
+
+Botões:
+🟢 [ BUY MKT ]  🔴 [ SELL MKT ]  = Compra/Vende NA HORA
+🟦 [ BUY BID ]  🟥 [ SELL ASK ]  = Tenta pegar preço melhor
+⬆️ [ BUY STOP ] ⬇️ [ SELL STOP ] = Ordem pendente (abre depois)
+
+Como usar:
+• Clique em BUY MKT para COMPRAR agora
+• Clique em SELL MKT para VENDER agora
+• Os outros são para traders experientes
+
+🎚️ LINHA 4 e 5: FECHAR POSIÇÕES (5 BOTÕES)
+
+Botões:
+🔴 [ CLOSE ALL ] = Fecha TUDO
+❌ [ CLOSE BUY ] [ CLOSE SELL ] = Fecha só compras ou só vendas
+🚫 [ CANCEL BUY ] [ CANCEL SELL ] = Cancela ordens que não abriram
+
+Como usar:
+• CLOSE ALL = Botão de pânico! Fecha tudo na hora
+• Use quando quiser sair de todas operações rapidinho
+
+🔧 LINHA 6: FERRAMENTAS (2 BOTÕES)
+
+Botões:
+🔄 [ INVERT ] = Inverte tudo (fecha e abre no lado oposto)
+⚖️ [ BREAK EVEN ] = Move todos stops pro zero
+
+Como usar:
+• INVERT: Se você tá comprado e acha que vai cair, clica aqui
+  (fecha compras e abre vendas)
+• BREAK EVEN: Clica e todos os stops vão pro preço de entrada
+  (não perde mais nada)
+
+🎨 LINHA 7: CONTROLES (2 BOTÕES)
+
+Botões:
+[ MINIMIZE ] = Esconde o painel
+[ VISUAL MODE ] = Liga/desliga trading clicando no gráfico
+
+═══ PAINEL INFERIOR - O QUE SIGNIFICA ═══
+
+Esse painel mostra 4 COLUNAS de informações:
+
+📋 COLUNA 1 - CONFIGURAÇÃO ATUAL:
+• Volume: quanto você tá operando agora (ex: 0.01)
+• TP: seu gain (quantos pontos pra ganhar)
+• SL: seu stop (quantos pontos pra perder)
+• Breakeven: se tá ativo
+
+🟢 COLUNA 2 - STATUS DO SISTEMA:
+• AutoTrading: Verde = robô ligado / Vermelho = robô desligado
+• Mode: HEDGE ou NETTING (tipo da sua corretora)
+• Spread: custo atual da operação
+• Server Time: que horas são no servidor
+
+💵 COLUNA 3 - SEUS LUCROS:
+• Open Profit: quanto tá ganhando/perdendo AGORA
+• Daily: quanto ganhou HOJE
+• Weekly: quanto ganhou essa SEMANA
+• Monthly: quanto ganhou esse MÊS
+• Win Rate: sua taxa de acerto (ex: 70% = acerta 7 de 10)
+
+🔢 COLUNA 4 - POSIÇÕES:
+• Total Positions: quantas operações tem abertas
+• Buy/Sell: quantas compras / quantas vendas
+• Volume: volume total aberto
+• Pending: ordens que ainda não abriram
+
+═══ ATALHOS DO TECLADO ═══
+
+Tecla M = Esconde/mostra o painel lateral
+Tecla Q = Liga/desliga modo visual
+
+MODO VISUAL (quando ligado):
+Shift + Clique no gráfico = COMPRA naquele preço
+Ctrl + Clique no gráfico = VENDE naquele preço
+
+═══════════════════════════════════════════════════════════════════
+5️⃣ CONFIGURAÇÕES AVANÇADAS
+═══════════════════════════════════════════════════════════════════
+
+Quando você já tiver experiência, pode mexer em mais configurações:
+
+═══ INDICADORES TÉCNICOS ═══
+
+• Enable Stochastic: true/false (usa indicador Stochastic)
+• Enable RSI: true/false (usa indicador RSI)
+• Enable MA: true/false (usa Médias Móveis)
+• Enable Price Action: true/false (usa padrões de candles)
+
+Dica: Comece com TODOS ligados (true)
+
+═══ GERENCIAMENTO DE RISCO ═══
+
+• Risk Type: FIXED / RISK_PERCENT / ATR_BASED
+  - FIXED: sempre o mesmo lote
+  - RISK_PERCENT: calcula pelo risco %
+  - ATR_BASED: baseado na volatilidade
+
+• Risk Percent: 1.0 (arrisco 1% da conta por trade)
+• Max Daily Trades: 5 (máximo 5 trades por dia)
+• Max Open Positions: 3 (máximo 3 posições abertas)
+
+═══ TRAILING STOP (STOP MÓVEL) ═══
+
+• Enable Trailing: true (ativa trailing stop)
+• Trailing Start: 500 (começa quando ganhar 500 pts)
+• Trailing Step: 50 (desloca de 50 em 50 pts)
+
+Como funciona:
+Quando o trade tá ganhando 500 pontos, o stop começa a subir
+junto com o preço. Se o preço cair 50 pontos, fecha no lucro.
+
+═══ BREAKEVEN AUTOMÁTICO ═══
+
+• Enable Breakeven: true
+• Breakeven Mode: SIMPLE / PROFIT_LOCK / AGGRESSIVE
+  - SIMPLE: move pro zero exato
+  - PROFIT_LOCK: move pro zero + alguns pontos
+  - AGGRESSIVE: move mais rápido
+
+• Breakeven Trigger: 300 (ativa quando ganhar 300 pts)
+• Breakeven Profit: 50 (deixa 50 pts de lucro travado)
+
+═══ FILTROS DE HORÁRIO ═══
+
+• Trading Sessions:
+  - Asian Session: 00:00 - 09:00 (horário de Brasília)
+  - London Session: 09:00 - 18:00
+  - NY Session: 13:00 - 22:00
+
+• Enable News Filter: true
+  - Minutes Before News: 30 (para 30 min antes)
+  - Minutes After News: 30 (para 30 min depois)
+
+═══ ANÁLISE MULTI-TIMEFRAME ═══
+
+• Enable MTF: true (usa tempos maiores para confirmar)
+• MTF Timeframe: H4 (usa gráfico de 4 horas)
+• MTF Filter: MA / TREND / BOTH
+  - MA: usa média móvel do tempo maior
+  - TREND: usa direção da tendência
+  - BOTH: usa os dois
+
+═══════════════════════════════════════════════════════════════════
+6️⃣ DICAS PARA GANHAR MAIS E PERDER MENOS
+═══════════════════════════════════════════════════════════════════
+
+💎 DICAS DE OURO:
+
+1. COMECE PEQUENO
+   • Use 0.01 lote no início
+   • Vá aumentando conforme ganha experiência
+   • Nunca arrisque mais de 2% da conta por trade
+
+2. TESTE EM DEMO PRIMEIRO
+   • Mínimo 2 semanas em conta demo
+   • Só vá pro real depois de entender TUDO
+   • Demo é de graça, aproveite!
+
+3. NÃO OPERE SEXTA-FEIRA
+   • Fim de semana pode ter gap (preço pular)
+   • Configure: Trade Friday: false
+   • Mais seguro operar segunda a quinta
+
+4. USE PROTEÇÕES
+   • SEMPRE use Stop Loss
+   • SEMPRE ative Breakeven
+   • Configure limite de perda diária
+
+5. ESCOLHA BEM O HORÁRIO
+   • Melhores horários: 9h às 17h (Brasília)
+   • Evite madrugada (pouca liquidez)
+   • Evite 30min antes/depois de notícias importantes
+
+6. NÃO MEXA NAS OPERAÇÕES DO ROBÔ
+   • Se configurou direito, deixa trabalhar
+   • Não fique mexendo manualmente
+   • Dê tempo pro robô mostrar resultado (mínimo 1 semana)
+
+7. ACOMPANHE OS RESULTADOS
+   • Olhe o Win Rate no painel
+   • Se tiver abaixo de 50%, algo tá errado
+   • Ajuste as configurações aos poucos
+
+8. USE TRAILING STOP
+   • Protege lucros já conquistados
+   • Configure: Trailing Start: 500, Trailing Step: 50
+   • Deixa o lucro correr, corta o prejuízo rápido
+
+9. DIVERSIFIQUE
+   • Não opere só 1 ativo
+   • Use em EURUSD, XAUUSD, Mini Dólar
+   • Mas não abra 10 de uma vez (comece com 1 ou 2)
+
+10. TENHA PACIÊNCIA
+    • Trading não é enriquecimento rápido
+    • Meta realista: 5-10% ao mês
+    • Quem promete 100% ao mês tá mentindo
+
+═══════════════════════════════════════════════════════════════════
+7️⃣ ERROS COMUNS E COMO RESOLVER
+═══════════════════════════════════════════════════════════════════
+
+❌ ERRO: Aparece 😞 no gráfico
+
+✅ SOLUÇÃO:
+1. Verifique se o botão AutoTrading tá VERDE
+2. Clique nele para ligar
+3. Se continuar, tire o robô e coloque de novo
+
+❌ ERRO: Robô não abre operações
+
+✅ SOLUÇÃO:
+1. Verifique se Enable Trading: true
+2. Verifique se o horário tá certo (Start Hour / End Hour)
+3. Verifique se o dia da semana tá habilitado
+4. Mercado pode estar fechado (fim de semana)
+5. Veja se o spread não tá muito alto
+
+❌ ERRO: Painel não aparece
+
+✅ SOLUÇÃO:
+1. Nas configurações, verifique:
+   - Show Side Panel: true
+   - Show Info Panel: true
+2. Aperte a tecla M (minimizar/mostrar)
+3. Tire o robô e coloque de novo
+
+❌ ERRO: "Trade is disabled" (Trading desabilitado)
+
+✅ SOLUÇÃO:
+1. No MT5, vá em: Ferramentas → Opções
+2. Aba "Expert Advisors"
+3. Marque: "Permitir trading automatizado"
+4. Marque: "Permitir importação de DLLs"
+5. Clique OK
+6. Reinicie o MT5
+
+❌ ERRO: Robô abre muitas operações de uma vez
+
+✅ SOLUÇÃO:
+1. Configure: Max Positions: 1 (ou 2, 3)
+2. Configure: Max Daily Trades: 5
+3. Isso limita quantas operações ele abre
+
+❌ ERRO: Stop Loss não fecha no lugar certo
+
+✅ SOLUÇÃO:
+1. Configure: Stop Loss Points: 500 (ou outro valor)
+2. Valores muito pequenos podem dar erro
+3. Mínimo recomendado: 300 pontos
+
+❌ ERRO: Robô perdendo muito
+
+✅ SOLUÇÃO:
+1. PARE! Volte pra demo
+2. Revise as configurações
+3. Diminua o risco (Volume: 0.01)
+4. Ative todas as proteções
+5. Configure Daily Loss Limit: 500 (ou menor)
+6. Pode ser que o mercado não tá bom pro robô agora
+
+❌ ERRO: Licença expirada
+
+✅ SOLUÇÃO:
+1. Entre em contato conosco
+2. Renovamos pra você
+3. WhatsApp / Telegram / Email (veja final do manual)
+
+═══════════════════════════════════════════════════════════════════
+8️⃣ PERGUNTAS FREQUENTES
+═══════════════════════════════════════════════════════════════════
+
+❓ O robô funciona em qualquer corretora?
+
+Sim! Funciona em TODAS as corretoras MT5 do mundo:
+- Brasileiras: XP, Modal, Rico, Clear, Ativa, Índice
+- Internacionais: TickMill, IC Markets, Pepperstone, XM, etc
+
+❓ Funciona em conta demo?
+
+Sim! E você DEVE testar em demo primeiro antes de ir pro real.
+
+❓ Quanto dinheiro preciso para começar?
+
+Mínimo: USD 100
+Recomendado: USD 500
+Ideal: USD 1000+
+
+Quanto mais capital, mais seguro fica.
+
+❓ Qual o lucro esperado?
+
+Realista: 5-10% ao mês
+Possível: 15-20% ao mês (com mais risco)
+Impossível: 100% ao mês (fuja de quem promete isso)
+
+❓ Preciso deixar o computador ligado?
+
+Sim! Ou use um VPS (servidor na nuvem).
+Se desligar o PC, o robô para de operar.
+
+❓ O que é VPS?
+
+É um computador na nuvem que fica ligado 24h.
+Recomendamos se você quiser operar 24h sem parar.
+Custa cerca de USD 10-20 por mês.
+
+❓ Posso usar em vários gráficos ao mesmo tempo?
+
+Sim! Pode colocar em EURUSD, XAUUSD, Mini Dólar, etc.
+Mas use Magic Numbers diferentes em cada um.
+
+❓ O que é Magic Number?
+
+É um número que identifica as operações do robô.
+Se usar em 2 gráficos, use números diferentes:
+- Gráfico 1: Magic Number: 12345
+- Gráfico 2: Magic Number: 54321
+
+❓ Posso operar manualmente junto com o robô?
+
+Pode! Use os botões do painel.
+Mas não mexa nas operações que o robô abriu.
+
+❓ O robô usa Martingale?
+
+NÃO por padrão. Mas você pode ativar se quiser.
+Não recomendamos para iniciantes.
+
+❓ Funciona em qual tempo gráfico?
+
+Qualquer tempo! Mas recomendamos:
+- M15 ou M30: para day trade
+- H1 ou H4: para swing trade
+
+❓ Preciso entender de trading para usar?
+
+Não precisa ser expert, mas precisa saber o básico:
+- O que é Stop Loss e Take Profit
+- Diferença entre compra e venda
+- Gerenciamento de risco
+
+❓ Quantas operações o robô abre por dia?
+
+Depende da configuração. Padrão: 3-5 por dia.
+Você controla isso em: Max Daily Trades
+
+❓ O robô opera final de semana?
+
+Não. O mercado Forex fecha no final de semana.
+Reabre domingo à noite / segunda de manhã.
+
+❓ Tenho que ficar olhando o tempo todo?
+
+Não! É automático. Mas é bom dar uma olhada 1-2 vezes por dia.
+
+❓ E se der problema?
+
+Temos suporte rápido:
+- WhatsApp
+- Telegram
+- Email
+
+(Contatos no final do manual)
+
+═══════════════════════════════════════════════════════════════════
+9️⃣ SUPORTE E CONTATO
+═══════════════════════════════════════════════════════════════════
+
+📞 PRECISA DE AJUDA? FALE COM A GENTE:
+
+WhatsApp: [SEU NÚMERO]
+Telegram: [SEU USUÁRIO]
+Email: [SEU EMAIL]
+
+⏰ HORÁRIO DE ATENDIMENTO:
+Segunda a Sexta: 9h às 18h (horário de Brasília)
+Resposta em até 2 horas no horário comercial
+
+🎁 GRUPO VIP:
+Após comprar, você entra no grupo VIP do Telegram com:
+- Outros usuários do NEXUS
+- Dicas e configurações
+- Atualizações e novidades
+
+📚 MATERIAIS EXTRAS:
+
+✅ Vídeo tutoriais (em breve)
+✅ Exemplos de configuração (.set files)
+✅ Atualizações gratuitas por 1 ano
+
+═══════════════════════════════════════════════════════════════════
+🎯 CHECKLIST FINAL - ANTES DE COMEÇAR
+═══════════════════════════════════════════════════════════════════
+
+Antes de operar, confira se fez TUDO:
+
+☐ Instalei o NEXUS no MT5
+☐ Testei em conta DEMO primeiro
+☐ Configurei com valores pequenos (0.01 lote)
+☐ Ativei o AutoTrading (botão verde)
+☐ Configurei Stop Loss e Take Profit
+☐ Ativei Breakeven automático
+☐ Configurei limite de perda diária
+☐ Escolhi horário de operação (9h-17h)
+☐ Desabilitei sexta-feira
+☐ Li o manual completo
+☐ Entendi como usar os botões
+☐ Salvei os contatos de suporte
+
+═══════════════════════════════════════════════════════════════════
+✨ MENSAGEM FINAL
+═══════════════════════════════════════════════════════════════════
+
+Parabéns por adquirir o NEXUS TRADING PRO IA!
+
+Você tem agora uma das ferramentas mais completas do mercado.
+Mas lembre-se: o robô é uma FERRAMENTA, não uma máquina de dinheiro.
+
+Você precisa:
+✅ Configurar corretamente
+✅ Usar gerenciamento de risco
+✅ Ter paciência
+✅ Entender que perdas fazem parte
+
+Siga este manual, teste bastante em demo, e vá com calma.
+
+Trading é uma maratona, não uma corrida de 100 metros.
+
+Qualquer dúvida, estamos aqui para ajudar! 🚀
+
+═══════════════════════════════════════════════════════════════════
+NEXUS TRADING PRO IA v4.71
+© 2024-2025 - Todos os direitos reservados
+═══════════════════════════════════════════════════════════════════
