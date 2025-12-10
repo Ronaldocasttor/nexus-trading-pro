@@ -118,6 +118,27 @@ img {
     color: var(--secondary);
 }
 
+.nav-btn {
+    background: rgba(255,255,255,0.15);
+    padding: 10px 20px;
+    border-radius: 8px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    white-space: nowrap;
+    font-weight: 600;
+}
+
+.nav-btn:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-2px);
+    color: white !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
 .btn-nav {
     background: var(--white);
     color: var(--primary);
@@ -308,18 +329,24 @@ img {
 
 .features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .feature-card {
     background: var(--white);
-    padding: 40px 30px;
+    padding: 30px;
     border-radius: 20px;
     box-shadow: var(--shadow);
     transition: all 0.3s;
     position: relative;
     border: 2px solid transparent;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 25px;
+    align-items: start;
 }
 
 .feature-card:hover {
@@ -347,16 +374,16 @@ img {
 }
 
 .feature-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: var(--gradient);
-    border-radius: 20px;
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 25px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: var(--white);
+    flex-shrink: 0;
 }
 
 .feature-card.featured .feature-icon {
@@ -1039,7 +1066,22 @@ img {
     }
     
     .nav-links {
-        display: none;
+        flex-wrap: wrap;
+        gap: 8px !important;
+    }
+    
+    .nav-btn {
+        padding: 8px 12px;
+        font-size: 0.85em;
+    }
+    
+    .feature-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        margin: 0 auto 20px;
     }
     
     .hero-stats {
